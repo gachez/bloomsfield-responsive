@@ -1,0 +1,1396 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <title>Bloomsfield School and Kindergarten</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    </head>
+    <style>
+        html{
+            font-size: 16px;
+        }
+        body{
+            margin: 0;
+            padding: 0;
+            
+        }
+        
+        #testimonial-title{
+            display: none;
+        }   
+            
+         /*        menu bar*/
+    .top-navigation-bar 
+        {
+            position: fixed;
+            top: 0;
+            display: none;
+            width: 100%;
+            height: 80px;
+            box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.15);
+            background-color: white;
+            z-index: 999;
+        }
+        
+/*        menu bar navigation items*/
+        .top-navigation-bar a
+        {
+            text-decoration: none;
+            font-family: 'Nunito', sans-serif;
+            font-size: 1.35rem;
+            font-weight: bold;
+            font-style: normal;
+            font-stretch: normal;
+            line-height: 1.41;
+            letter-spacing: normal;
+            color: #5a5a5a;
+        }
+        
+/*        logo in menu bar*/
+        #logo-web{
+            position: absolute;
+            left: 2.9%;
+              width: 13.313rem;
+  height: 5rem;
+        }
+        
+        
+/*        menu links*/
+        #home-web{
+            position: absolute;
+            left: 57.2%;
+            top: 26.3%;
+        }
+        
+/*        on hover*/
+        #home-web:hover{
+            color: #22b14c;
+        }
+        
+/*        on active*/
+        #home-web:active{
+            color: #22b14c;
+        }
+        
+        #about-web{
+            position: absolute;
+            left: 64.6%;
+            top: 26.3%;
+        }
+        
+        
+/*        on hover*/
+        #about-web:hover{
+            color: #22b14c;
+        }
+        
+        #gallery-web{
+            position: absolute;
+            left: 74.4%;
+            top: 26.3%;
+        }
+        
+        
+/*        on hover*/
+        #gallery-web:hover{
+            color: #22b14c;
+        }
+        
+        #events-web{
+            position: absolute;
+            left: 82.6%;
+            top: 26.3%;
+        }
+        
+        
+/*        on hover*/
+        #events-web:hover{
+            color: #22b14c;
+        }
+        
+        #contacts-web{
+            position: absolute;
+            left: 90.5%;
+            top: 26.3%;
+        }
+        
+/*        on hover*/
+        #contacts-web:hover{
+            color: #22b14c;
+        }
+/*        menu links end*/
+       
+
+        
+        
+        #menu{
+            position: fixed;
+            top: 0;
+            z-index: 999;
+            width: 100%;
+            height: 60px;
+              box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.15);
+  background-color: #ffffff;
+        }
+        
+        #logo{
+            position: absolute;
+            left: 5.6%;
+            top: 2%;
+            width: 91px;
+            height: 34px;
+            
+            
+        }
+        
+        #hamburger{
+           width: 32px;
+           height: 32px;
+            position: absolute;
+            left: 85.6%;
+            top: 14px;
+    
+        }
+    
+        
+        
+        
+        
+        /* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) and (max-width: 992px) {
+    
+    
+    #hamburger{
+        left: 90.6%;
+    }
+    
+    #logo{
+        top: 0;
+         width: 159px;
+  height: 60px;
+    }
+        } 
+        
+        
+/*        styling for the menu goes here*/
+        #menu-container{
+          display: none;
+            position: absolute;
+            top: 0;
+            width: 100%;
+            height: 100vh;
+            z-index: 9999;
+              box-shadow: 0 1px 6px 0 rgba(0, 0, 0, 0.25);
+  background-color: #ffffff;
+        }
+        
+        
+        
+        #menu-logo{
+                        position: absolute;
+            left: 5.6%;
+            top: 2.7%;
+            width: 95px;
+            height: 38px;
+        }
+        
+        #close-black{
+            width: 6%;
+            height: 3.8%;
+            position: absolute;
+            top: 2.7%;
+            left: 87.5%;
+        }
+        
+        #menu-container a{
+            
+            text-decoration: none;
+             
+  height: 25px;
+  font-family: Nunito;
+  font-size: 18px;
+  font-weight: bold;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #1a1a1a;
+        }
+        
+        #home{
+            position: absolute;
+            width: 100%;
+            top: 22.4%;
+            text-align: center;
+            
+        }
+        
+        #home:hover{
+            color: #22b14c;
+        }
+        
+                #about{
+            position: absolute;
+            width: 100%;
+            top: 38.2%;
+            text-align: center;
+            
+        }
+        
+        #about:hover{
+             color: #22b14c;
+        }
+             #gallery{
+            position: absolute;
+            width: 100%;
+            top: 52.8%;
+            text-align: center;
+            
+        }
+        
+        #gallery:hover{
+            color: #22b14c;
+        }
+        
+             #events{
+            position: absolute;
+            width: 100%;
+            top: 68.6%;
+            text-align: center;
+            
+        }
+        
+        #events:hover{
+           color: #22b14c;
+        }
+        
+             #contacts{
+            position: absolute;
+            width: 100%;
+            top: 84.3%;
+            text-align: center;
+            
+        }
+        
+        #contacts:hover{
+            color: #22b14c;       
+         }
+        
+        
+        
+        
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1024px) {
+  
+    .top-navigation-bar{
+        display: block;
+    }
+    
+    #menu{
+        display: none;
+    }
+    
+        }
+/*
+        
+        
+        menu ends here
+*/
+        
+        #hero{
+              position: absolute;
+            width: 100%;
+  height: 200px;
+            top: 60px;
+  background-image: url('jumbo.jpg');
+            background-position: center;
+            background-size: cover;
+
+        }
+        
+        /*        more button that redirects to the gallery page*/
+        #more{
+            position: absolute;
+            top: 80%;
+            left: 45.6%;
+             width: 120px;
+  height: 3.125rem;
+  border-radius: 1.563rem;
+  background-color: #22b14c;
+    text-align: center;
+            padding-top: 0.938rem;
+  font-family: Nunito;
+  font-size: 0.875rem;
+  font-weight: bold;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: 0.3px;
+  color: #ffffff;
+            display: none;
+        }
+        
+        #more:hover{
+            background: #0EA139;
+        }
+        
+        
+        
+        
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1024px) {
+  
+    #hero{
+        height: 550px;
+        
+    }
+    
+    #more{
+        display: block;
+    }
+    
+        }        
+        
+        /* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) and (max-width: 992px) {
+    
+    #hero{
+        height: 309.2px;
+    }
+        } 
+        
+        
+        
+        
+        #welcome-title-container{
+            width: 100%;
+            height: 51px;
+            
+            position: absolute;
+            top: 43.5%;
+        
+        }
+        
+        
+        
+        
+        #welcome-title{
+            margin: auto;
+            display: flex;
+            width: 207px;
+  height: 50px;
+  font-family: Nunito;
+  font-size: 18px;
+  font-weight: bold;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #1a1a1a;
+        }
+        
+
+        @media only screen and (min-width: 365px) and (max-width: 758px) {
+            #welcome-title-container{
+                position: absolute;
+                top: 40%;
+            }
+}
+        /* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) and (max-width: 992px) {
+    #welcome-title-container{
+        position: absolute;
+        top: 40%;
+    }
+    #welcome-title{
+          width: 60%;
+  height: 28px;
+  font-family: Nunito;
+  font-size: 20px;
+  font-weight: bold;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #1a1a1a;
+    } 
+    
+        }
+        
+        #welcome-paragraph-container{
+            width: 100%;
+            height: 86px;
+            
+            position: absolute;
+            top: 53.5%;
+            
+        }
+        
+        
+        #welcome-paragraph{
+            width: 320px;
+  height: 85px;
+            display: flex;
+            margin: auto;
+  font-family: Nunito;
+  font-size: 14px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.29;
+  letter-spacing: normal;
+  color: #1a1a1a;
+            padding: 15px;
+        }
+        
+        
+        /* web media queries       */
+        @media only screen and (min-width: 1024px){
+            #welcome-title-container{
+                top: 85.5%;
+                left: 3%;
+            }
+            
+            #welcome-title{
+                  width: 64.2%;
+  height: 55px;
+  font-family: Nunito;
+  font-size: 40px;
+  font-weight: bold;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #1a1a1a;
+            }
+            
+            #welcome-paragraph-container{
+                top: 92.5%;
+            }
+            
+            #welcome-paragraph{
+                 width: 55%;
+  height: 118px;
+  font-family: Nunito;
+  font-size: 24px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.41;
+  letter-spacing: normal;
+  color: #1a1a1a;
+            }
+        }
+        
+        
+/*            medium devices tablets*/
+                        @media only screen and (min-width: 768px) and (max-width: 992px) {
+            #welcome-paragraph-container{
+                position: absolute;
+                top: 42.5%;
+            }
+                            
+                                     
+}
+        
+                @media only screen and (min-width: 365px) and (max-width: 750px) {
+            #welcome-paragraph-container{
+                position: absolute;
+                top: 48%;
+            }
+}
+        
+        
+/*        medium devices tablets welcome paragraph styling responsive*/
+        @media only screen and (min-width: 768px) and (max-width: 992px){
+            #welcome-paragraph{
+                width: 60%;
+                font-size: 16px;
+            }
+        }
+        
+        #video-container{
+            position: absolute;
+            top: 70%;
+            width: 100%;
+            height: 182px;
+        }
+         
+        
+        
+        
+        @media only screen and (min-width: 1024px){
+            #video-container{
+                top: 108%;
+                width: 100%;
+                height: 500px;
+            }
+        }
+                @media only screen and (min-width: 365px) and (max-width: 768px) {
+            #video-container{
+                position: absolute;
+                top: 62.5%;
+                
+            }
+}
+        
+/*        for mobile heights*/
+                @media only screen and (min-height: 800px) and (max-height: 992px) {
+                    #welcome-title-container{
+                        top: 35%;
+                    }
+                    
+                    #welcome-paragraph-container{
+                        top: 41.5%;
+                    }
+                    
+            #video-container{
+                position: absolute;
+                top: 55%;
+            }
+}
+        
+                 @media only screen and (min-width: 450px) and (max-height: 570px) {
+                    #welcome-title-container{
+                        top: 48%;
+                    }
+                    
+                    #welcome-paragraph-container{
+                        top: 57.5%;
+                    }
+                    
+            #video-container{
+                position: absolute;
+                top: 78%;
+            }
+}
+/*    medium devices tablets among others video container styling*/
+        @media only screen and (min-width:768px) and (max-width: 992px){
+            #video-container{
+                position: absolute;
+                top: 51.5%;
+                
+            }
+            
+        
+        } 
+        
+        #video-holder{
+            display: flex;
+            margin: auto;
+              width: 320px;
+  height: 181.3px;
+  background-color: #000000;
+        }
+        
+        @media only screen and (min-width: 1024px){
+            #video-holder{
+                width: 64.6%;
+                height: 450px;
+            }
+        }
+        
+      /*    medium devices tablets among others video container styling*/
+        @media only screen and (min-width:768px) and (max-width: 992px){
+            #video-holder{
+                width: 78.1%;
+                height: 340px;
+                
+            }
+            
+        
+        } 
+        
+        #what-we-do-container{
+            width: 100%;
+            height: 2%;
+            position: absolute;
+            top: 41rem;
+        }
+  
+              /*    medium devices tablets among others video container styling*/
+        @media only screen and (min-width:768px) and (max-width: 992px){
+            #what-we-do-container{
+                top: 86%;
+                
+            }
+            
+        
+        }
+        
+        
+        #what-we-do{
+        width: 103px;
+  height: 25px;
+  font-family: Nunito;
+  font-size: 18px;
+  font-weight: bold;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #1a1a1a;    
+            display: flex;
+            margin: auto;
+        }
+        
+        
+        
+        @media only screen and (min-width: 1024px){
+            #what-we-do-container{
+                top: 173%; 
+            }
+            
+            #what-we-do{
+                width: 16.8%;
+  height: 55px;
+  font-family: Nunito;
+  font-size: 40px;
+  font-weight: bold;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #1a1a1a;
+            }
+        }
+        
+        
+                /*    medium devices tablets among others video container styling*/
+        @media only screen and (min-width:768px) and (max-width: 992px){
+            #what-we-do{
+              width: 137px;
+  height: 33px;
+  font-family: Nunito;
+  font-size: 24px;
+  font-weight: bold;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #1a1a1a;
+                
+            }
+            
+        
+        }
+        
+        
+        #what-we-do-text-container{
+            width: 100%;
+            height: 11%;
+            position: absolute;
+            top: 43rem;
+        }
+        
+        
+        #what-we-do-text{
+            display: flex;
+            margin: auto;
+              width: 88.9%;
+            
+  height: 10%;
+  font-family: Nunito;
+  font-size: 14px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  text-align: center;
+  letter-spacing: normal;
+  color: #000000;
+        }
+        
+        @media only screen and (min-width: 1024px){
+            #what-we-do-text-container{
+                top: 182.5%;
+            }
+            
+            #what-we-do-text{
+                width: 71%;
+  height: 158px;
+  font-family: Nunito;
+  font-size: 24px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.41;
+  letter-spacing: normal;
+  color: #1a1a1a;
+            }
+        }
+        
+                   /*    medium devices tablets among others video container styling*/
+        @media only screen and (min-width:768px) and (max-width: 992px){
+        
+            #what-we-do-text-container{
+                top: 90.5%;
+            }
+            
+        
+        }
+                   /*    medium devices tablets among others video container styling*/
+        @media only screen and (min-width:768px) and (max-width: 992px){
+            #what-we-do-text{
+                width: 75.4%;
+  height: 97px;
+  font-family: Nunito;
+  font-size: 16px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.29;
+  letter-spacing: normal;
+  color: #1a1a1a;
+            }
+        }
+        
+        
+        
+        
+        #green-btn-container{
+            width: 100%;
+            height: 50px;
+            position: absolute;
+            top: 52.5rem;
+        }
+        
+        
+        
+                  /*    medium devices tablets among others video container styling*/
+        @media only screen and (min-width:768px) and (max-width: 992px){
+            #green-btn-container{
+                top: 101.5%;
+            }
+        }
+        
+        
+        #green{
+            display: flex;
+            margin: auto;
+              width: 130px;
+  height: 48px;
+  border-radius: 25px;
+  background-color: #22b14c;
+             
+  padding-left: 26px;
+            padding-top: 15px;
+  font-family: Nunito;
+  font-size: 12px;
+  font-weight: bold;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #ffffff;
+
+        }
+        
+        
+        
+/*        large screens*/
+        
+        @media only screen and (min-width: 1024px){
+            #green-btn-container{
+                top: 199%;
+            }
+
+            #green{
+                width: 154px;
+  height: 50px;
+  font-size: 14px;
+                padding-left: 30px;
+
+            }
+            
+        }
+        
+                   /*    medium devices tablets among others video container styling*/
+        @media only screen and (min-width:768px) and (max-width: 992px){
+            #green{
+                width: 144px;
+  height: 48px;
+            }
+        }
+        
+        #testimonial-container{
+            width: 100%;
+            height: 218px;
+            background-color: #f3f3f3;
+            position: absolute;
+            top: 57rem;
+        }
+        
+                   /*    medium devices tablets among others video container styling*/
+        @media only screen and (min-width:768px) and (max-width: 992px){
+            #testimonial-container{
+                top: 109%;
+                height: 345.2px;
+            }
+            
+        
+        }
+        
+        #testimonial{
+            width: 77%;
+            height: 57%;
+            margin: auto;
+            display: flex;
+            background-color: #ffffff;
+            padding: 10px;
+            
+            
+        }
+        
+                     /*    medium devices tablets among others video container styling*/
+        @media only screen and (min-width:768px) and (max-width: 992px){
+            #testimonial{
+                position: absolute;
+                left: 17.4%;
+                top: 19.6%;
+                width: 65.1%;
+                height: 210px;
+            }
+            
+        
+        }
+        
+        #testimonial-text{
+        position: relative;
+            left: 3px;
+            top: -10px;
+         
+  height: 66px;
+  font-family: Nunito;
+  font-size: 12px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #5a5a5a;
+            display: flex;
+            margin: auto;
+        }
+        
+            
+        
+        
+        
+                     /*    medium devices tablets among others video container styling*/
+        @media only screen and (min-width:768px) and (max-width: 992px){
+            #testimonial-text{
+                 width: 450px;
+  height: 73px;
+  font-family: Nunito;
+  font-size: 16px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.29;
+  letter-spacing: normal;
+  color: var(--dark-grey);
+            }
+            
+        
+        }
+        
+        #parent-name{
+            position: absolute;
+            left: 17.5%;
+            top: 53%;
+             width: 120px;
+  height: 17px;
+  font-family: Nunito;
+  font-size: 12px;
+  font-weight: 600;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #5a5a5a;
+        }
+        
+          
+                     /*    medium devices tablets among others video container styling*/
+        @media only screen and (min-width:768px) and (max-width: 992px){
+            #parent-name{
+    padding: 20px;
+                width: 200px;
+  height: 22px;
+  font-family: Nunito;
+  font-size: 16px;
+  font-weight: bold;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: var(--dark-grey);
+            }
+            
+        
+        }
+        
+        
+        #left-icon{
+            width: 5px;
+            height: 8px;
+            position: relative;
+            top: 70px;
+            left: 20.5px;
+            
+        }
+        
+        
+        
+        
+        
+        #right-icon{
+            width: 5px;
+            height: 8px;
+            
+            position: relative;
+            top: 70px;
+            left: 89%;
+            
+        }
+        
+        
+        
+/*        larger screens*/
+        @media only screen and (min-width: 1024px){
+            #testimonial-container{
+                top:210%;
+                width: 100%;
+  height: 614px;
+ 
+}
+            #testimonial{
+                      position: relative;
+            top: 20.5%;
+            left: 1%;
+            width: 58.6%;           }
+        
+            
+            #testimonial-text{
+                 width: 720px;
+  height: 118px;
+  font-family: Nunito;
+  font-size: 24px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.41;
+  letter-spacing: normal;
+  color: var(--dark-grey);
+            }
+            
+            #parent-name{
+                position: absolute;
+                top: 60%;
+                padding: 20px;
+                 width: 200px;
+  height: 37px;
+  font-family: Nunito;
+  font-size: 22px;
+  font-weight: bold;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.41;
+  letter-spacing: normal;
+  color: #1a1a1a;
+            }
+        }
+        
+                        /*    medium devices tablets among others video container styling*/
+        @media only screen and (min-width:768px) and (max-width: 992px){
+            #left-icon{
+                 width: 6px;
+                position: absolute;
+                top: 48%;
+                left: 5%;    
+  height: 12px;
+  border: solid 2px var(--charcoal);
+
+            }
+            
+            #right-icon{
+                 width: 6px;
+                position: absolute;
+                top: 48%;
+                right: 5% ;
+  height: 12px;
+  border: solid 2px var(--charcoal);
+
+            }
+            
+        
+        }
+        
+/*        footer section*/
+        #footer{
+            position: absolute;
+            top: 70rem;
+              width: 100%;
+        
+  height: 50px;
+  background-color: #22b14c;
+        }
+        #copyright{
+        padding-top: 18px;
+            padding-left: 20px;
+  height: 14px;
+  font-family: Nunito;
+  font-size: 10px;
+  font-weight: 600;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #ffffff;
+        }
+        
+        #fb-icon{
+            width: 16px;
+            height: 16px;
+            position: absolute;
+            left: 90%;
+            bottom: 15px;
+        }
+        
+/*        larger devices big screens*/
+        @media only screen and (min-width: 1024px){
+            
+            #testimonial-title{
+        display: block;
+                font-family: Nunito;
+  font-size: 40px;
+  font-weight: bold;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #1a1a1a;
+                position: absolute;
+                left: 41.6%;
+                top: 7.5%;
+            }
+            
+            
+            #footer{
+                top: 293%;
+                height: 75px;
+            }
+            
+            #copyright{
+                padding-left: 40px;
+                padding-top: 25px;
+                font-family: Nunito;
+  font-size: 18px;
+  font-weight: bold;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #ffffff;
+            }
+            
+            #fb-icon{
+                width: 24px;
+                height: 24px;
+            left: 95.3%;
+            top: 33.3%;
+            }
+            
+        }
+                       /*    medium devices tablets among others video container styling*/
+        @media only screen and (min-width:768px) and (max-width: 992px){
+            #footer{
+                top: 142.5%;
+            }
+            #menu-container{
+        
+        height: 65%;
+    }
+    #menu-logo{
+        width: 20.7%;
+        height: 10.8%;
+    }
+    #close-black{
+        width: 3.3%;
+        height: 4.2%;
+        margin-top: 3.25%;
+    }
+    .menu-items{
+        font-size: 22px;
+    }
+    
+            
+        
+        }
+        
+        @media only screen and (min-width: 1024px){
+            #left-icon{
+                position: absolute;
+                top: 52%;
+                left: 6.2%;
+                width: 8px;
+                height: 16px;
+            }
+            
+            #right-icon{
+                position: absolute;
+                top: 52%;
+                right: 6.2%;
+                width: 8px;
+                height: 16px;
+            }
+        }
+        
+/*        landscape media queries*/
+        @media only screen and (max-width: 850px) and (orientation: landscape){
+            #close-black{
+                height: 28px;
+                width: 28px;
+                margin-top: 10px;
+            }
+            
+            #welcome-title-container{
+                top: 78.75%;
+        
+            }
+            
+            #welcome-paragraph-container{
+                top: 91.75%;
+            }
+            
+            #video-container{
+                top: 121%;
+            }
+            
+            #green{
+                top: 110%;
+            }
+            
+            #right-icon{
+                left: 92%;
+            }
+            
+            #left-icon{
+                left: 5%;
+            }
+        }
+        
+        @media only screen and (max-height: 420px) and (orientation: landscape){
+            #what-we-do{
+                margin-top: 5%;
+            }
+            
+            #what-we-do-text-container{
+                margin-top: 7.5%;
+            }
+        }
+        
+        @media only screen and (min-height: 310px) and (max-height: 330px){
+            #welcome-title-container{
+                top: 90.5%;
+            }
+            
+            #welcome-paragraph-container{
+                top: 109.5%;
+            }
+            
+            #video-container{
+                top: 145%;
+                
+            }
+        }
+        
+        @media only screen and (min-width: 800px) and (max-width: 830px){
+            #welcome-title-container{
+                top: 97%;
+            }
+            
+            #welcome-paragraph-container{
+                top: 105%;
+            }
+            
+            
+            #video-container{
+                top: 129%;
+            }
+            
+            #what-we-do{
+                margin-top: 65%;
+            }
+            
+            #what-we-do-text{
+                margin-top: 60%;
+            }
+            #welcome-paragraph-container{
+                top: 105%;
+            }
+            
+            #green{
+                margin-top: 73.5%;
+            }
+            
+            #testimonial-container{
+                top: 270%;
+            }
+            
+            #footer{
+                top: 370%;
+            }
+        }
+        
+        @media only screen and (min-height: 365px ) and (max-height: 390px){
+            #welcome-title-container{
+                top: 102.5%;
+            }
+            
+            #welcome-paragraph-container{
+                top: 110%;
+                    
+            }
+            
+            #video-container{
+                top: 135.5%;
+            }
+            #video-holder{
+                height: 300px;
+            }
+            
+            #testimonial-container{
+                top: 280%;
+            }
+        }
+        
+        @media only screen and (max-width: 330px){
+            #welcome-title-container{
+                top: 48.5%;
+            }
+            
+            #welcome-paragraph{
+               margin-top: 5%;
+            }
+            
+            #video-holder{
+                margin-top: 10%;
+            }
+            
+            #green{
+                margin-top: 10px;
+            }
+        }
+    </style>
+    <body>
+        
+        <!--        the top navigation bar-->
+    <div class="top-navigation-bar">
+        <img id="logo-web" src='logo.png'/>
+        <a id="home-web" href="index.html">
+        <p>Home</p>
+        </a>
+         <a id="about-web" href="about-us.html">
+        <p>About Us</p>
+        </a>
+         <a id="gallery-web" href="gallery.html">
+        <p>Gallery</p>
+        </a>
+         <a id="events-web" href="events.html">
+        <p>Events</p>
+        </a>
+         <a id="contacts-web" href="contact-us.html">
+        <p>Contacts</p>
+        </a>
+        </div>
+<!--        ends here-->
+        
+<!--        menu stsarts here-->
+    <div id="menu">
+        <img id="logo" src="logo.png"/>
+        <a href="#">
+        <img onclick="onHamburgerClick()" id="hamburger" src="hamburger.jpg"/>    
+        </a>
+        </div>
+<!--        menu ends here-->
+        
+<!--        hero image-->
+        <div id="hero" >
+        
+            <a  href="gallery.html"><div id="more">MORE</div></a>
+        </div>
+<!--        menu container-->
+        <div id="menu-container">
+        <img onclick="closeMenu()" id="close-black" src="close.png"/>
+        <img id="menu-logo" src="logo.png"/>
+         <a id="home" href="index.html">
+        <p>Home</p>
+        </a>
+         <a id="about" href="about-us.html">
+        <p>About Us</p>
+        </a>
+         <a id="gallery" href="gallery.html">
+        <p>Gallery</p>
+        </a>
+         <a id="events" href="events.html">
+        <p>Events</p>
+        </a>
+         <a id="contacts" href="contact-us.html">
+        <p>Contacts</p>
+        </a>
+        </div>
+<!--        menu container ends here-->
+        <div id="welcome-title-container">
+        <p id="welcome-title">Welcome to Bloomsfield Kindergarten and School</p>
+        </div>
+        
+        <div id="welcome-paragraph-container">
+        <p id="welcome-paragraph">We are a Christian centered institution with a qualified team of staff at hand to provide an excellent range of learning experiences for all children.</p>
+        </div>
+    <div id="video-container"><div id="video-holder"></div></div>
+        <div id="what-we-do-container">
+        <p id="what-we-do">What we do</p>
+            
+        </div>
+        <div id="what-we-do-text-container">
+        <p id="what-we-do-text">Located in the Ruaka area, we place strong emphasis on the early years of child training and development. By combining modern teaching techniques and Christian principles, we raise young individuals into high principled, self-confident and hardworking future problem solvers.</p>
+        </div>
+        <div id="green-btn-container">
+        <a href="about-us.html">
+            <div id="green">LEARN MORE</div>
+            </a>
+        </div>
+            <div id="testimonial-container">
+                <p id="testimonial-title">Testimonials</p>
+            <img id="left-icon" src="ico_left.png"/>
+                <img id="right-icon" src="ico_right.png"/>
+                <div id="testimonial">
+                <p id="testimonial-text">Bringing my child to Bloomsfield has been the best decision. The time he has spent there has created the perfect foundation for his future education. I love it. </p>
+                    <p id="parent-name">Okwayo's dad</p>
+                </div>
+            </div>
+        <div id="footer">
+        <p id="copyright">Copyright &copy; 2019. Bloomsfield School. All rights reserved.</p>
+            <img id="fb-icon" src="ico_facebook.png"/>
+         
+        </div>
+        <script>
+        let hamburger = document.getElementById("hamburger")
+        let menu = document.getElementById("menu-container")
+
+        
+        const onHamburgerClick = () =>{
+            menu.style.display="block"
+            window.scrollTo(x-coord, y-coord);
+            
+        }
+        
+        const closeMenu = () =>{
+            menu.style.display="none"
+        }
+        
+        </script>
+    </body>
+</html>

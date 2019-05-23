@@ -1,0 +1,1179 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>
+    Bloomsfield School and Kindergarten
+    </title>
+          <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    
+    
+     <style>
+     html{
+            font-size: 16px;
+            
+        }
+        body{
+            height: 100%;
+            width: 100%;
+            padding: 0;
+            margin: 0;
+        }
+        
+         .top-navigation-bar{
+             display: none;
+         }
+          #menu{
+            position: fixed;
+            top: 0;
+            z-index: 999;
+            width: 100%;
+            height: 60px;
+              box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.15);
+  background-color: #ffffff;
+        }
+        
+        #logo{
+            position: absolute;
+            left: 5.6%;
+            top: 21.7%;
+            width: 91px;
+            height: 34px;
+        }
+        
+        #hamburger{
+           width: 32px;
+           height: 32px;
+            position: absolute;
+            left: 85.6%;
+            top: 14px;
+    
+        }
+        
+             
+               /* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) and (max-width: 992px) {
+    
+    #hamburger{
+        left: 90.6%;
+    }
+    
+    #logo{
+        top: 0;
+         width: 159px;
+  height: 60px;
+    }
+        }
+        
+        
+         
+      
+      /*        styling for the menu goes here*/
+        #menu-container{
+          display: none;
+            position: absolute;
+            top: 0;
+            width: 100%;
+            height: 100vh;
+            z-index: 9999;
+              box-shadow: 0 1px 6px 0 rgba(0, 0, 0, 0.25);
+  background-color: #ffffff;
+        }
+        
+        #menu-logo{
+                        position: absolute;
+            left: 5.6%;
+            top: 2.7%;
+            width: 95px;
+            height: 38px;
+        }
+        
+        #close-black{
+            width: 6%;
+            height: 3.8%;
+            position: absolute;
+            top: 2.7%;
+            left: 87.5%;
+        }
+        
+        #menu-container a{
+            
+            text-decoration: none;
+             
+  height: 25px;
+  font-family: Nunito;
+  font-size: 18px;
+  font-weight: bold;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #1a1a1a;
+        }
+        
+        #home{
+            position: absolute;
+            width: 100%;
+            top: 22.4%;
+            text-align: center;
+            
+        }
+        
+        #home:hover{
+            color: #22b14c;
+        }
+        
+                #about{
+            position: absolute;
+            width: 100%;
+            top: 38.2%;
+            text-align: center;
+            
+        }
+        
+        #about:hover{
+             color: #22b14c;
+        }
+             #gallery{
+            position: absolute;
+            width: 100%;
+            top: 52.8%;
+            text-align: center;
+            
+        }
+        
+        #gallery:hover{
+            color: #22b14c;
+        }
+        
+             #events{
+            position: absolute;
+            width: 100%;
+            top: 68.6%;
+            text-align: center;
+            
+        }
+        
+        #events:hover{
+           color: #22b14c;
+        }
+        
+             #contacts{
+            position: absolute;
+            width: 100%;
+            top: 84.3%;
+            text-align: center;
+            
+        }
+        
+        #contacts:hover{
+            color: #22b14c;       
+         }
+/*
+        
+        menu ends here
+*/
+         
+/*         contacts title*/
+         #contacts-title{
+               
+  position: absolute;
+             top: 15.5%;
+             left: 5.6%;
+  font-family: Nunito;
+  font-size: 32px;
+  font-weight: 600;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.39;
+  letter-spacing: normal;
+  color: #1a1a1a;
+         }
+        
+             
+               /* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) and (max-width: 992px) {
+    
+    #contacts-title{
+        top: 10.5%;
+          font-family: Nunito;
+  font-size: 32px;
+  font-weight: 600;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.39;
+  letter-spacing: normal;
+  color: var(--charcoal);
+    }
+        }
+        
+        
+         
+         
+         #phone{
+             position: absolute;
+             top: 27.1%;
+             left: 6%;
+  font-family: Nunito;
+  font-size: 14px;
+  font-weight: bold;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.29;
+  letter-spacing: normal;
+  color: #1a1a1a; 
+         }
+         #number1{
+ position: absolute;
+ top: 32.5%;
+             left: 6%;
+  font-family: Nunito;
+  font-size: 14px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.29;
+  letter-spacing: normal;
+  color: #1a1a1a;
+         }
+         
+         
+         #number2{
+ position: absolute;
+ top: 37.5%;
+             left: 6%;
+  font-family: Nunito;
+  font-size: 14px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.29;
+  letter-spacing: normal;
+  color: #1a1a1a;
+         }
+         
+         #email-title{
+             position: absolute;
+             top: 47%;
+             left: 6%;
+             font-family: Nunito;
+  font-size: 14px;
+  font-weight: bold;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.29;
+  letter-spacing: normal;
+  color: #1a1a1a;
+         }
+         
+         #address{
+             position: absolute;
+             top: 52%;left: 6%;
+              font-family: Nunito;
+  font-size: 14px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.29;
+  letter-spacing: normal;
+  color: var(--charcoal);
+         }
+         
+             
+               /* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) and (max-width: 992px) {
+    
+    #phone{
+        top: 18.5%;
+         font-family: Nunito;
+  font-size: 16px;
+  font-weight: bold;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: var(--charcoal);
+    }
+    
+    #number1{
+        top: 21.95%;
+          font-family: Nunito;
+  font-size: 16px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.29;
+  letter-spacing: normal;
+  color: var(--charcoal);
+    }
+    
+    #number2{
+        top: 25%;
+          font-family: Nunito;
+  font-size: 16px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.29;
+  letter-spacing: normal;
+  color: var(--charcoal);
+    }
+    
+    #email-title{
+        top: 35%;
+        width: 17%;
+          font-family: Nunito;
+  font-size: 16px;
+  font-weight: bold;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: var(--charcoal);
+    }
+    
+    
+    #address{
+        top: 38.5%;
+        font-family: Nunito;
+  font-size: 16px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.29;
+  letter-spacing: normal;
+  color: var(--charcoal);
+    }
+        }
+        
+        
+         
+         #quick-inquiry{
+              font-family: Nunito;
+  font-size: 14px;
+  font-weight: bold;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.29;
+  letter-spacing: normal;
+  color: #1a1a1a;
+             position: absolute;
+             top: 62.5%;
+             left: 6%;
+         }
+         
+         /* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) and (max-width: 992px) {
+    #quick-inquiry{
+        top: 18.5%;
+        left: 55.5%;
+         font-family: Nunito;
+  font-size: 16px;
+  font-weight: bold;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #1a1a1a;
+    }
+         
+         }
+         
+         #full-name-text{
+            width: 88.9%;
+  height: 55px;
+             padding-left: 20px;
+  border-radius: 5px;
+             border: none;
+  background-color: #f3f3f3;  
+             position: absolute;
+             top: 67%;
+             left: 6%;
+         }
+         #email-address{
+               width: 88.9%;
+  height: 55px;
+  border-radius: 5px;
+             padding-left: 20px;
+  background-color: #f3f3f3;
+             position: absolute;
+             top: 78.5%;
+             border: none;
+             left: 6%;
+         }
+         #message{
+               width: 88.9%;
+  height: 220px;
+             padding-left: 20px;
+  border-radius: 5px;
+  background-color: #f3f3f3;
+border: none;
+             position: absolute;
+             top: 90%;
+             left: 6%;
+         }
+         
+         #send-btn{
+               width: 130px;
+  height: 48px;
+  border-radius: 25px;
+  background-color: #22b14c;
+             padding: 15px;
+             text-align: center;
+             position: absolute;
+             top: 129%;
+             left: 6%;
+             
+  font-family: Nunito;
+padding: 10px;
+             font-size: 12px;
+  font-weight: bold;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: var(--white);
+         }
+         
+         
+         
+         
+         #line{
+             width: 88.9%;
+             height: 0.5px;
+             background: #f3f3f3;
+             position: absolute;
+             top: 142%;
+             left: 6%;
+         }
+         
+         #social-title{
+             position: absolute;
+             top: 148%;
+             left: 6%;
+             
+             font-family: Nunito;
+  font-size: 14px;
+  font-weight: bold;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.29;
+  letter-spacing: normal;
+  color: #1a1a1a;
+         }
+         
+         #facebook-logo{
+             width: 24px;
+     height: 24px;
+
+    position: absolute;
+             top: 153.5%;
+             left: 6%;
+
+         }
+         
+         
+/*         medium devices wich are tablets and small desktop screens*/
+         @media only screen and (min-width: 768px) and (max-width: 992px){
+         
+             #full-name-text{
+                  width: 39.3%;
+  height: 55px;
+  border-radius: 5px;
+  background-color: #f3f3f3;
+                 top: 21.95%;
+                 left: 55.5%;
+             }
+             #email-address{
+                              width: 39.3%;
+  height: 55px;
+  border-radius: 5px;
+  background-color: #f3f3f3;
+                 top: 28.95%;
+                 left: 55.5%;
+             }
+             #message{
+                              width: 39.3%;
+  height: 150px;
+  border-radius: 5px;
+  background-color: #f3f3f3;
+                 top: 35.95%;
+                 left: 55.5%;
+             }
+             
+             #send-btn{
+                 top: 52.5%;
+                 left: 55.5%;
+             }
+             
+             #line{
+                 top: 62.5%;
+                 height: 1px;
+                 background: #1a1a1a;
+             }
+             
+             
+         }
+         
+         #map{
+             width: 99.7%;
+             height: 35.7%;
+             display: none;
+             position: absolute;
+             top: 66%;
+         }
+    
+               /* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) and (max-width: 992px) {
+         
+    #social-title{
+        top: 48%;
+        font-family: Nunito;
+  font-size: 16px;
+  font-weight: bold;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: var(--charcoal);
+    }
+    
+    #facebook-logo{
+        top: 51%;
+    }
+    
+    #map{
+        display: block;
+    }
+         }
+         
+         
+             #open-btn{
+               width: 130px;
+  height: 48px;
+  border-radius: 25px;
+  background-color: #22b14c;
+             text-align: center;
+             position: absolute;
+             top: 151.5%;
+             left: 58.3%;
+             
+  font-family: Nunito;
+padding: 15px;
+             font-size: 12px;
+  font-weight: bold;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: var(--white);
+         }
+         
+         #bottom-line{
+             width: 88.9%;
+             height: 0.5px;
+             background: black;
+             position: absolute;
+             top: 163.5%;
+             left: 6%;
+             
+         }
+         
+                           /*        footer section*/
+        #footer{
+            
+    position: absolute;
+            top: 168%;
+                   width: 100%;
+  height: 50px;
+  background-color: #22b14c;
+        }
+        #copyright{
+        padding-top: 18px;
+            padding-left: 20px;
+  height: 14px;
+  font-family: Nunito;
+  font-size: 10px;
+  font-weight: 600;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #ffffff;
+        }
+        
+        #fb-icon{
+            width: 16px;
+            height: 16px;
+            position: absolute;
+            left: 90%;
+            bottom: 15px;
+        }
+         
+         @media only screen and (min-width: 768px) and (max-width: 992px){
+             #open-btn{
+                 display: none;
+             }  
+             
+             #footer{
+                 top: 105%;
+             }
+         }
+         
+         @media only screen and (max-width:600px){
+             #send-btn{
+                 top: 131%;
+             }
+             
+             #open-btn{
+                 left: 52.5%;
+             }
+         }
+         
+         @media only screen and (min-height: 800px) and (max-height: 850px){
+             #phone{
+                 top: 25%;
+             }
+             
+             #number1{
+                 top: 28.5%;
+             }
+             
+             #number2{
+                 top: 31.5%;
+             }
+             
+             #email-title{
+                 top: 40%;
+             }
+             
+             #address{
+                 top: 43.5%;
+             }
+             
+             #quick-inquiry{
+                 top: 51.5%;
+             }
+             
+             #full-name-text{
+                 top: 56.5%;
+             }
+             
+             #email-address{
+                 top: 64.5%;
+             }
+             
+             #message{
+                 top: 72.5%;
+             }
+             
+             #send-btn{
+                 top: 102.5%;
+             }
+             
+             #line{
+                 background-color: black;
+                 top: 115%;
+             }
+             
+             #social-title{
+                 top: 122.5%;
+             }
+             
+             #facebook-logo{
+                 top: 126.5%;
+             }
+             
+             #open-btn{
+                 top: 122.75%;
+             }
+             
+         }
+         
+/*         media queries for large screens*/
+         @media only screen and (min-width: 1024px){
+             #menu{
+                 display: none;
+                 
+             }
+             
+                                      /*        menu bar*/
+    .top-navigation-bar 
+        {
+            position: fixed;
+            top: 0;
+            display: block;
+            width: 100%;
+            height: 80px;
+            box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.15);
+            background-color: white;
+            z-index: 999;
+        }
+        
+/*        menu bar navigation items*/
+        .top-navigation-bar a
+        {
+            text-decoration: none;
+            font-family: 'Nunito', sans-serif;
+            font-size: 1.35rem;
+            font-weight: bold;
+            font-style: normal;
+            font-stretch: normal;
+            line-height: 1.41;
+            letter-spacing: normal;
+            color: #5a5a5a;
+        }
+        
+/*        logo in menu bar*/
+        #logo-web{
+            position: absolute;
+            left: 2.9%;
+              width: 13.313rem;
+  height: 5rem;
+        }
+        
+        
+/*        menu links*/
+        #home-web{
+            position: absolute;
+            left: 57.2%;
+            top: 26.3%;
+        }
+        
+/*        on hover*/
+        #home-web:hover{
+            color: #22b14c;
+        }
+        
+/*        on active*/
+        #home-web:active{
+            color: #22b14c;
+        }
+        
+        #about-web{
+            position: absolute;
+            left: 64.6%;
+            top: 26.3%;
+        }
+        
+        
+/*        on hover*/
+        #about-web:hover{
+            color: #22b14c;
+        }
+        
+        #gallery-web{
+            position: absolute;
+            left: 74.4%;
+            top: 26.3%;
+        }
+        
+        
+/*        on hover*/
+        #gallery-web:hover{
+            color: #22b14c;
+        }
+        
+        #events-web{
+            position: absolute;
+            left: 82.6%;
+            top: 26.3%;
+        }
+        
+        
+/*        on hover*/
+        #events-web:hover{
+            color: #22b14c;
+        }
+        
+        #contacts-web{
+            position: absolute;
+            left: 90.5%;
+            top: 26.3%;
+        }
+        
+/*        on hover*/
+        #contacts-web:hover{
+            color: #22b14c;
+        }
+/*        menu links end*/
+  
+             #contacts-title{
+                 font-size: 40px;
+                 top: 18%;
+             }    
+             
+             #phone{
+                 font-size: 18px;
+                 top: 30%;
+             }
+             
+             #number1{
+                 font-size: 18px;
+                 top: 35.75%;
+             }
+             
+             #number2{
+                 font-size: 18px;
+                 top: 40%;
+             }
+             
+             #email-title{
+                 font-size: 18px;
+                 top: 49%;
+             }
+             
+             #address{
+                 font-size: 18px;
+                 top: 53.5%;
+             }
+             
+             #quick-inquiry{
+                 font-size: 18px;
+                 top: 30%;
+                 left: 58%;
+             }
+             
+             #full-name-text{
+                 width: 25.6%;
+                 top: 35.75%;
+                 left: 58%;
+                 font-size: 18px;
+             }
+             
+             #email-address{
+                 width: 25.6%;
+                 top: 45.5%;
+                 left: 58%;
+                 font-size: 18px;
+             }
+             
+             #message{
+                 width: 25.6%;
+                 top: 55.5%;
+                 left: 58%;
+                 font-size: 18px;
+             }
+             
+             #social-title{
+                 top: 68.5%;
+                 font-size: 18px;
+             }
+             
+             #facebook-logo{
+                 top: 73.75%;
+                 
+             }
+             
+             #open-btn{
+                 display: none;
+             }
+             
+             #send-btn{
+                 top: 87.5%;
+                 left: 58%;
+                 font-size: 14px;
+             }
+             
+             #line{
+                 background-color: black;
+                top: 100%;
+             }
+             
+             #map{
+                 display: block;
+                 top: 107%;
+                 height: 524px;
+             }
+             
+               #footer{
+                top: 180%;
+                height: 70px;
+            }
+            
+            #copyright{
+                padding-left: 40px;
+                padding-top: 25px;
+                font-family: Nunito;
+                font-size: 18px;
+                font-weight: bold;
+                font-style: normal;
+                font-stretch: normal;
+                line-height: normal;
+                letter-spacing: normal;
+                color: #ffffff;
+            }
+            
+            #fb-icon{
+                width: 24px;
+                height: 24px;
+            left: 95.3%;
+            top: 33.3%;
+            }
+         }
+         
+         
+         @media only screen and (max-width: 767px) and (orientation: landscape){
+    
+             #menu{
+                 height: 60px;
+             }
+             
+             #contacts-title{
+                 top: 24.5%;
+             }
+             
+             #phone{
+                 top: 38%;
+             }
+             
+             #number1{
+                 top: 44%;
+             }
+             
+             #number2{
+                 top: 49.75%;
+             }
+             
+             #email-title{
+                 top: 58.5%;
+             }
+             
+             #address{
+                 top: 65%;
+             }
+             
+             #quick-inquiry{
+                 top: 76.5%;
+             }
+             
+             #full-name-text{
+                 top: 85.5%;
+             }
+             
+             #email-address{
+                 top: 104%;
+             }
+             
+             #message{
+                 top: 124%;
+             }
+             
+             #send-btn{
+                 top: 190%;
+             }
+             
+             #social-title{
+                 top: 218%;
+             }
+             
+             #facebook-logo{
+                 top: 225%;
+             }
+             
+             #open-btn{
+                 top: 222%;
+             }
+             
+             #bottom-line{
+                 display: none;
+             }
+             
+             #footer{
+                top: 250%;
+             }
+         }
+         
+         
+        @media only screen and (min-width: 800px) and (max-width: 830px){
+         
+            #contacts-title{
+                top: 23.5%;
+            }     
+            
+            #phone{
+                top: 38.5%;
+            }
+            
+            #number1{
+                top: 47%;
+            }
+            
+            #number2{
+                top: 53.75%;
+            }
+            
+            #email-title{
+                top: 68%;
+            }
+            
+            #line{
+              display: none;
+            }
+            
+            #bottom-line{
+                top: 140.5%;
+            }
+            
+            #address{
+                
+                top: 74.5%;
+            }
+            
+            
+            #social-title{
+                top: 101%;
+            }
+            #facebook-logo{
+                top: 109%;
+            }
+            
+            #quick-inquiry{
+                top: 38.5%;
+            }
+            
+            #full-name-text{
+                top: 47%;
+            }
+            
+            #email-address{
+                top: 63%;
+            }
+            
+            #message{
+                top: 80%;
+            }
+            
+            #send-btn{
+                top: 122.5%;
+            }
+            
+            #map{
+                top: 150%;
+                height: 80%;
+            }
+            
+            
+            #footer{
+                top: 240%;
+            }
+         } 
+    
+    </style>
+    </head>
+    
+    <body>
+    
+      <!--        the top navigation bar-->
+    <div class="top-navigation-bar">
+        <img id="logo-web" src='logo.png'/>
+       <a id="home-web" href="index.html">
+        <p>Home</p>
+        </a>
+         <a id="about-web" href="about-us.html">
+        <p>About Us</p>
+        </a>
+         <a id="gallery-web" href="gallery.html">
+        <p>Gallery</p>
+        </a>
+         <a id="events-web" href="events.html">
+        <p>Events</p>
+        </a>
+         <a id="contacts-web" href="contact-us.html">
+        <p>Contacts</p>
+        </a>
+        </div>
+<!--        ends here-->
+   
+        
+     <!--        menu stsarts here-->
+    <div id="menu">
+        <img id="logo" src="logo.png"/>
+        <a href="#"><img onclick="onHamburgerClick()" id="hamburger" src="hamburger.jpg"/></a>    
+        </div>
+<!--        menu ends here-->
+        
+        <!--        menu container-->
+        <div id="menu-container">
+        <img onclick="closeMenu()" id="close-black" src="close.png"/>
+       
+             <img id="menu-logo" src="logo.png"/>
+        
+         <a id="home" href="#">
+        <p>Home</p>
+        </a>
+         <a id="about" href="#">
+        <p>About Us</p>
+        </a>
+         <a id="gallery" href="#">
+        <p>Gallery</p>
+        </a>
+         <a id="events" href="#">
+        <p>Events</p>
+        </a>
+         <a id="contacts" href="#">
+        <p>Contacts</p>
+        </a>
+        </div>
+<!--        menu container ends here-->  
+        
+<!--        contact title-->
+        <p id="contacts-title">Contacts</p>
+        
+        <p id="phone">PHONE</p>
+        <p id="number1">+254 726730582</p>
+        <p id="number2">+254 726730582</p>
+        
+        <p id="email-title">EMAIL ADDRESS</p>
+        <p id="address">info@bloomsfieldschool.co.ke</p>
+        <p id="quick-inquiry">QUICK INQUIRY</p>
+        
+        <input placeholder="Full name" id="full-name-text"/>
+        <input placeholder="Email address" id="email-address"/>
+        <input placeholder="Write a short message" id="message"/>
+        
+        <div id="send-btn">SEND</div>
+        <div id="line"></div>
+        <p id="social-title">SOCIAL MEDIA</p>
+        <img id="facebook-logo" src="ico_facebook_black.png"/>
+     <div id="open-btn">OPEN MAP</div>
+        <div id="bottom-line"></div>
+        
+        
+        <iframe id="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d997.2333534023697!2d36.782121329189586!3d-1.2067514999449824!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x182f3d4cac117fef%3A0x4187be2979be2dbf!2sBloomsfield+Kindergarten+and+School!5e0!3m2!1sen!2ske!4v1555958165894!5m2!1sen!2ske" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+        
+                   <div id="footer">
+        <p id="copyright">Copyright &copy; 2019. Bloomsfield School. All rights reserved.</p>
+            <img id="fb-icon" src="ico_facebook.png"/>
+         
+        </div>
+        
+        
+        
+                          <script>
+            
+//            code for menu functionality
+        let hamburger = document.getElementById("hamburger")
+        let menu = document.getElementById("menu-container")
+
+        
+        const onHamburgerClick = () =>{
+            menu.style.display="block"
+            
+        }
+        
+        const closeMenu = () =>{
+            menu.style.display="none"
+        }
+        
+        //ends here
+        
+//        
+//        cooode to toggle the blocks
+  
+        
+        </script>
+    </body>
+</html>
