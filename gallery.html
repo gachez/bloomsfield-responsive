@@ -535,6 +535,7 @@
                 width: 25.4%;
                 height: 350px;
                 top: 32.5%;
+                cursor: pointer;
             }
             #card1-title{
                 width: 25.4%;
@@ -542,6 +543,7 @@
                 background-color: white;
                 font-size: 22px;
                 top: 80%;
+                cursor: pointer;
             }
             
             #card2{
@@ -549,6 +551,7 @@
                 height: 350px;
                 top: 32.5%;
                 left: 37.5%;
+                cursor: pointer;
             
             }
             
@@ -559,10 +562,11 @@
                 font-size: 22px;
                 top: 80%;
                 left: 37.5%;    
+                cursor: pointer;
             }
             
             #card3{
-                
+                cursor: pointer;
                     width: 25.4%;
                 height: 350px;
                 top: 32.5%;
@@ -576,6 +580,7 @@
                 font-size: 22px;
                 top: 80%;
                 left: 66.8%;  
+                cursor: pointer;
             }
             
              
@@ -757,7 +762,10 @@
 //            code for menu functionality
         let hamburger = document.getElementById("hamburger")
         let menu = document.getElementById("menu-container")
-
+        let card1 = document.getElementById("card1")
+        
+        
+        
         
         const onHamburgerClick = () =>{
             menu.style.display="block"
@@ -772,7 +780,13 @@
         
 //        
 //        cooode to toggle the blocks
-  
+ 
+        card1.addEventListener('click', ()=>{
+            if(screen.width >= 768 ){
+               
+            window.location.href="gallery-page.html"
+
+               }        })
         
         </script>
     </body>

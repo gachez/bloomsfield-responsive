@@ -1,0 +1,86 @@
+<html>
+<head>
+    <title>
+    Bloomsfield School and Kindergarten
+    </title>
+    
+    <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    </head>
+    <style>
+      .dark-screen{
+         width: 100vw;
+         height: 100vh;
+            background: rgba(0,0,0,0.8);
+            z-index: 999;
+        display: flex;
+        }
+        
+        .image-container{
+            margin: auto;
+width: 77.5%;
+height: 73.5%;
+display: none;
+          background-position: center;
+          background-size: cover;
+        }
+        
+        #first-img{
+            display: block;
+        }
+        #left{
+            position: absolute;
+            top: 50%;
+            left: 61px;
+            cursor: pointer;
+        }
+        #right{
+            position: absolute;
+            top: 50%;
+            right: 61px;
+            cursor: pointer;
+        }
+        #close{
+            background-image: url("close_white.png");
+            position: absolute;
+            top: 5%;
+            right: 61px;
+            cursor: pointer;
+        }
+    </style>
+    <body>
+    <div class="dark-screen">
+        <img id="first-img" src="computer1.jpg" class="image-container" />
+        <img src="computer2.jpg" class="image-container" />
+        <img src="playtime.jpg" class="image-container" />
+        <img src="painting.jpg" class="image-container" />
+        <img src="play1.jpg" class="image-container" />
+        <img id="left" onclick="plusDivs(-1)" src="white_left.png"/>
+        <img onclick="plusDivs(1)" id="right" src="white_right.png"/>
+            <a href="gallery.html"><img id="close" src="close_white.png"/></a>
+        
+        </div>
+        <script>
+           
+       
+        var slideIndex = 1;
+showDivs(slideIndex);
+
+function plusDivs(n) {
+  showDivs(slideIndex += n);
+}
+
+function showDivs(n) {
+  var i;
+  var x = document.getElementsByClassName("image-container");
+  if (n > x.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = x.length}
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";  
+  }
+  x[slideIndex-1].style.display = "block";  
+}
+            
+        </script>
+    </body>
+</html>
