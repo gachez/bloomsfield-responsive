@@ -1426,7 +1426,7 @@ color: #FFFFFF;
             
             #learning-text-block{
                 top: 371.5%;
-                height: 43.5%;
+                height: 46.5%;
                 margin-right: 50%;
             }
             
@@ -1560,8 +1560,8 @@ color: #FFFFFF;
 <!--        vision mission block for mobile and tablet -->
         <div class="expand-block"  id="vmblock">
         <p class="block-text" id="vmblock-text">Vision and Mission</p>
-            <img src="icon-up.jpg" id="upvm" class="up-icon" onclick="hideblock()" style="z-index: 999;">
-            <img src="ico-down-green.png" class="up-icon"/>
+            <img src="icon-up.jpg" id="upvm" class="up-icon" onclick="hideblockVM()" style="z-index: 999;">
+            <img src="ico-down-green.png" onclick="showblockVM()" class="up-icon"/>
         </div>
         <img class="expand-hero" src="hero.png" id="vm-hero" />
         <div id="vm-text-block">
@@ -1586,8 +1586,8 @@ color: #FFFFFF;
 <!--        why choose us block for mobile and tablet -->
         <div class="expand-block" id="whychoose-block">
         <p class="block-text">Why choose us</p>
-            <img src="icon-up.jpg" class="up-icon">
-            <img src="ico-down-green.png" class="up-icon"/>
+            <img src="icon-up.jpg" onclick="hideblockWhyChoose()" id="whyChooseUpBtn" class="up-icon" style="z-index: 999;">
+            <img src="ico-down-green.png" onclick="showblockWhyChoose()" id="whyChooseDownBtn" style="z-index: 998;" class="up-icon"/>
         </div>
         <img class="expand-hero" id="whychoose-hero" src="hero.png"/>
         <div id="whychoose-text-block">
@@ -1608,8 +1608,8 @@ We also pay close attention to the children entrusted in our care. We have ensur
         <!--        learning block for mobile and tablet -->
         <div class="expand-block" id="learning-block">
         <p class="block-text">Learning</p>
-            <img src="icon-up.jpg" class="up-icon">
-            <img src="ico-down-green.png" class="up-icon"/>
+            <img src="icon-up.jpg" class="up-icon" id="learningBtn" onclick="hideblockLearning()" style="z-index: 999;">
+            <img src="ico-down-green.png" onclick="showblockLearning()" class="up-icon" style="z-index: 998;"/>
         </div>
         <img class="expand-hero" id="learning-hero" src="hero.png"/>
         <div id="learning-text-block">
@@ -1686,6 +1686,7 @@ We also pay close attention to the children entrusted in our care. We have ensur
         At Bloomsfield, we offer the new Kenya National Curriculum, 2:6:6:3, as well as prepare children for International systems of education.
         </p>
         
+<!--
         <div class="box" id="playgroup1">Playgroup 1</div>
         <div class="box" id="playgroup2">Playgroup 2</div>
         <div class="box" id="beginner">Beginner</div>
@@ -1693,6 +1694,7 @@ We also pay close attention to the children entrusted in our care. We have ensur
         <div class="box" id="pp2">PP2</div>
         <div class="box" id="grade1">Grade 1</div>
         <div class="box" id="grade2">Grade 2</div>
+-->
 <!--        ends-->
         
         <!--        footer-->
@@ -1839,23 +1841,269 @@ We also pay close attention to the children entrusted in our care. We have ensur
         
         //ends here
         
+//        functions for cleaning up th larger screens 
+        function cleanBigScreen(){
+            if (screen.width >= 1024){
+                document.getElementsByClassName("expand-hero")[0].style.display="none"
+                document.getElementsByClassName("expand-hero")[1].style.display="none"
+                document.getElementsByClassName("expand-hero")[2].style.display="none"
+            }
+            
+            else{
+                console.log("small screen this one")
+            }
+        }
+        
+            window.onload = cleanBigScreen()
+        window.onload= visionMissionSelect()
+       
+        
 //        
 //        cooode to toggle the blocks for tablet and mobile
   
+//        vision mission variables 
         let visionMisionBlock = document.getElementById("vmblock");
         let visionMText = document.getElementsByClassName("block-text")[0]
         let upBtnVm = document.getElementsByClassName("up-icon")[0]
         let downBtnVm = document.getElementsByClassName("up-icon")[1]
+        let visionMHero = document.getElementById("vm-hero")
+        let visionMTextBlock = document.getElementById("vm-text-block")
+
+//        why choose section variables
+        let whyChooseBlock = document.getElementById("whychoose-block")
+        let whyChooseText = document.getElementsByClassName("block-text")[1]
+        let whyChooseHero = document.getElementById("whychoose-hero")
+        let whyChooseTextBlock = document.getElementById("whychoose-text-block")
+        let upBtnWhyChoose = document.getElementById("whyChooseUpBtn")
+        let downBtnWhyChoose  = document.getElementById("whyChooseDownBtn")
         
-        const hideblock = () =>{
+        
+//        functions to toggle the visonmision block
+        
+        const hideblockVM = () =>{
+            if(screen.width <= 768 && screen.width > 420){
+             
             visionMisionBlock.style.background="#f3f3f3"
             upBtnVm.style.display="none"
             visionMText.style.color="green"
+            visionMHero.style.display="none"
+            visionMTextBlock.style.display="none"
+            
+            
+            
+            whyChooseBlock.style.top="22.5%"
+            whyChooseHero.style.top="28%"
+            whychooseTextBlock.style.top="56%"
+               
+            }
+            
+            else if(screen.width < 420){
+                    visionMisionBlock.style.background="#f3f3f3"
+            upBtnVm.style.display="none"
+            visionMText.style.color="green"
+            visionMHero.style.display="none"
+            visionMTextBlock.style.display="none"
+            
+            
+            
+            whyChooseBlock.style.top="35.5%"
+            whyChooseHero.style.top="45%"
+            whyChooseTextBlock.style.top="88.5%"
+            }
+            
+            else{
+                console.log("wake up afriiica the time has come")
+            }
+        }
+        
+        const showblockVM = () =>{
+            if(screen.width <= 768 && screen.width > 420){
+            
+            visionMisionBlock.style.background="#22b14c"
+            upBtnWhyChoose.style.display="none"
+            visionMText.style.color="white"
+            visionMHero.style.display="block"
+            visionMTextBlock.style.display="block"
+            
+            whyChooseBlock.style.top="76%"
+            whyChooseHero.style.top="81.75%"
+            whyChooseTextBlock.style.top="110%"
+        }
+            else if(screen.width < 420){
+                
+                
+            visionMisionBlock.style.background="#22b14c"
+            upBtnVm.style.display="block"
+            visionMText.style.color="white"
+            visionMHero.style.display="block"
+            visionMTextBlock.style.display="block"
+            
+            whyChooseBlock.style.top="119%"
+            whyChooseHero.style.top="128.25%"
+            whyChooseTextBlock.style.top="170.5%"
+                
+            }
+            else{
+                console.log("unadai aje?")
+            }
+        }
+        
+//        ends here
+//        
+//        function to toggle the whychoose block
+        
+        const hideblockWhyChoose = () =>{
+            
+            if(screen.width <= 768 && screen.width > 420){
+            
+            whyChooseBlock.style.background="#f3f3f3"
+            upBtnWhyChoose.style.display="none"
+            whyChooseText.style.color="green"
+            whyChooseHero.style.display="none"
+            whyChooseTextBlock.style.display="none"
+            
+            learningBlock.style.top="85%"
+            learningHero.style.top="90.5%"
+            learningTextBlock.style.top="118%"
+        }
+             else if(screen.width < 420){
+                  
+            whyChooseBlock.style.background="#f3f3f3"
+            upBtnWhyChoose.style.display="none"
+            whyChooseText.style.color="green"
+            whyChooseHero.style.display="none"
+            whyChooseTextBlock.style.display="none"
+            
+            learningBlock.style.top="132.5%"
+            learningHero.style.top="140.75%"
+            learningTextBlock.style.top="182.5%"
+             }
+            else if(window.matchMedia("(orientation: landscape)").matches ){
+                
+            whyChooseBlock.style.background="#f3f3f3"
+            upBtnWhyChoose.style.display="none"
+            whyChooseText.style.color="green"
+            whyChooseHero.style.display="none"
+            whyChooseTextBlock.style.display="none"
+            
+            learningBlock.style.top="204.5%"
+            learningHero.style.top="140.75%"
+            learningTextBlock.style.top="182.5%"
+                
+            }
+            else{
+                console.log("unadai aje?")
+            }
+        }
+        
+        const showblockWhyChoose = () =>{
+            
+            
+            if(screen.width <= 768 && screen.width > 420){
+            
+            
+            whyChooseBlock.style.background="#22b14c"
+            upBtnWhyChoose.style.display="block"
+            whyChooseText.style.color="white"
+            whyChooseHero.style.display="block"
+            whyChooseTextBlock.style.display="block"
+            
+            learningBlock.style.top="132.5%"
+            learningHero.style.top="138.25%"
+            learningTextBlock.style.top="166.25%"
+            }
+            
+            else if(screen.width < 420){
+                whyChooseBlock.style.background="#22b14c"
+            upBtnWhyChoose.style.display="block"
+            whyChooseText.style.color="white"
+            whyChooseHero.style.display="block"
+            whyChooseTextBlock.style.display="block"
+            
+            learningBlock.style.top="206.5%"
+            learningHero.style.top="218.25%"
+            learningTextBlock.style.top="259.5%"
+            
+            }
+            
+            else if(window.matchMedia("(orientation: landscape)").matches){
+                
+                whyChooseBlock.style.background="#22b14c"
+            upBtnWhyChoose.style.display="block"
+            whyChooseText.style.color="white"
+            whyChooseHero.style.display="block"
+            whyChooseTextBlock.style.display="block"
+            
+            learningBlock.style.marginTop="204.5%"
+            learningHero.style.top="218.25%"
+            learningTextBlock.style.top="259.5%"
+            }
+            else{
+                console.log("unadai aje?")
+            }
+        }
+//       
+        
+        
+        
+        
+//          learning section variables
+        let learningBlock= document.getElementById("learning-block")
+        let learningText = document.getElementsByClassName("block-text")[2]
+        let upBtnLearning= document.getElementById("learningBtn")
+        let learningHero = document.getElementById("learning-hero")
+        let learningTextBlock = document.getElementById("learning-text-block")
+        
+//        function to toggle the learning block 
+        
+          const hideblockLearning = () =>{
+            learningBlock.style.background="#f3f3f3"
+            upBtnLearning.style.display="none"
+            learningText.style.color="green"
+            learningHero.style.display="none"
+            learningTextBlock.style.display="none"
+            
+        }
+        
+        const showblockLearning = () =>{
+              learningBlock.style.background="#22b14c"
+            upBtnLearning.style.display="block"
+            learningText.style.color="white"
+            learningHero.style.display="block"
+            learningTextBlock.style.display="block"
+//            
+//            learningBlock.style.top="132.5%"
+//            learningHero.style.top="138.25%"
+//            learningTextBlock.style.top="166.25%"
+//     
         }
         
         
+        
+//        ends here
+        
+//        starting page functions on load
             
             
+            
+            function landscapeBlocks(){
+                if(window.matchMedia("(orientation: portrait)").matches){
+                  
+            hideblockWhyChoose()
+            hideblockLearning()
+                }
+                
+                
+                else{
+                   
+                    console.log("landscape")
+                }
+            }
+            
+            window.onload=landscapeBlocks() 
+      
+        
+        
         </script>
     </body>
 
