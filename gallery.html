@@ -186,6 +186,29 @@
   color: var(--charcoal);
         }
         
+        #card1{
+            background-image: url("graduation.jpg");
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+        }
+        
+        
+        #card2{
+            background-image: url("playtime.jpg");
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+        }
+        
+        
+        #card3{
+            background-image: url("trip.jpg");
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+        }
+        
                /* Medium devices (landscape tablets, 768px and up) */
 @media only screen and (min-width: 768px) and (max-width: 992px) {
     
@@ -742,15 +765,23 @@
         
 <!--        gallery title-->
         <p id="gallery-title">Gallery</p>
+        <a onclick="imageSelectorCard1()" href="gallery-page.html">
         <div id="card1"></div>
         <div id="card1-title">Learning at Bloomsfield</div>
         
+        </a>
         
+        <a href="gallery-page.html" onclick="imageSelectorCard2()">
         <div id="card2"></div>
         <div id="card2-title">Playtime</div>
         
+        </a>
+        
+        <a href="gallery-page.html" onclick="imageSelectorCard3()">
         <div id="card3"></div>
         <div id="card3-title">School trips</div>
+        
+        </a>
         
          <div id="footer">
         <p id="copyright">Copyright &copy; 2019. Bloomsfield School. All rights reserved.</p>
@@ -781,13 +812,29 @@
 //        
 //        cooode to toggle the blocks
  
-        card1.addEventListener('click', ()=>{
-            if(screen.width >= 768 ){
-               
-            window.location.href="gallery-page.html"
-
-               }        })
+//        this section of code makes the gallery page to be dynamic to which card has been clicked on
         
+        
+        
+        const imageSelectorCard1 = () =>{
+            localStorage.setItem("pages", "learning")
+            
+        }
+        
+                const imageSelectorCard2 = () =>{
+            localStorage.setItem("pages", "playtime")
+            
+        }
+                
+                const imageSelectorCard3 = () =>{
+            localStorage.setItem("pages", "trips")
+            
+        }        
+                
+                
+        window.onload= () =>{
+            localStorage.clear()
+        }
         </script>
     </body>
 </html>
