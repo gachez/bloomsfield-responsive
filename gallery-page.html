@@ -21,8 +21,9 @@
 width: 77.5%;
 height: 73.5%;
 display: none;
-          background-position: center;
-          background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+          background-size: contain;
         }
         
         #first-img{
@@ -50,11 +51,11 @@ display: none;
     </style>
     <body>
     <div class="dark-screen">
-        <img id="first-img"  class="image-container" />
-        <img  class="image-container" />
-        <img  class="image-container" />
-        <img  class="image-container" />
-        <img  class="image-container" />
+        <div id="first-img"  class="image-container"></div>
+        <div  class="image-container"></div>
+        <div  class="image-container"></div>
+        <div  class="image-container"></div>
+        <div  class="image-container"></div>
         <img id="left" onclick="plusDivs(-1)" src="white_left.png"/>
         <img onclick="plusDivs(1)" id="right" src="white_right.png"/>
             <a href="gallery.html"><img id="close" src="close_white.png"/></a>
@@ -86,29 +87,29 @@ function showDivs(n) {
             
             const selectImagesBasedOnLocalStorage = () =>{
                 if(localStorage.getItem("pages") == "learning"){
-                    document.getElementsByTagName("img")[0].setAttribute("src", "computer1.jpg")
-                    document.getElementsByTagName("img")[1].setAttribute("src", "computer2.jpg")
-                    document.getElementsByTagName("img")[2].setAttribute("src", "playtime.jpg")
-                    document.getElementsByTagName("img")[3].setAttribute("src", "painting.jpg")
-                    document.getElementsByTagName("img")[4].setAttribute("src", "play1.jpg")
+                    document.getElementsByClassName("image-container")[0].style.backgroundImage="url('computer1.jpg')"
+                    document.getElementsByClassName("image-container")[1].style.backgroundImage="url('computer2.jpg')"
+                    document.getElementsByClassName("image-container")[2].style.backgroundImage="url('playtime.jpg')"
+                    document.getElementsByClassName("image-container")[3].style.backgroundImage="url('painting.jpg')"
+                    document.getElementsByClassName("image-container")[4].style.backgroundImage="url('play1.jpg')"
                 }
                 
                 else if(localStorage.getItem("pages")== "playtime"){
                     
-                    document.getElementsByTagName("img")[0].setAttribute("src", "play1.jpg")
-                    document.getElementsByTagName("img")[1].setAttribute("src", "play2.jpg")
-                    document.getElementsByTagName("img")[2].setAttribute("src", "play3.jpg")
-                    document.getElementsByTagName("img")[3].setAttribute("src", "play4.jpg")
-                    document.getElementsByTagName("img")[4].setAttribute("src", "swimming.jpg")
+        document.getElementsByClassName("image-container")[0].style.backgroundImage="url('play1.jpg')"
+         document.getElementsByClassName("image-container")[1].style.backgroundImage="url('play2.jpg')"
+                document.getElementsByClassName("image-container")[2].style.backgroundImage="url('play3.jpg')"
+           document.getElementsByClassName("image-container")[3].style.backgroundImage="url('play4.jpg')"
+                 document.getElementsByClassName("image-container")[4].style.backgroundImage="url('swimming.jpg')"
                 }
                 
                  else if(localStorage.getItem("pages")== "trips"){
                     
-                    document.getElementsByTagName("img")[0].setAttribute("src", "trip1.jpg")
-                    document.getElementsByTagName("img")[1].setAttribute("src", "trip2.jpg")
-                    document.getElementsByTagName("img")[2].setAttribute("src", "trip.jpg")
-                    document.getElementsByTagName("img")[3].setAttribute("src", "swimming.jpg")
-                    document.getElementsByTagName("img")[4].setAttribute("src", "play1.jpg")
+        document.getElementsByClassName("image-container")[0].style.backgroundImage="url('trip1.jpg')"
+          document.getElementsByClassName("image-container")[1].style.backgroundImage="url('trip2.jpg')"
+           document.getElementsByClassName("image-container")[2].style.backgroundImage="url('trip.jpg')"
+         document.getElementsByClassName("image-container")[3].style.backgroundImage="url('swimming.jpg')"
+          document.getElementsByClassName("image-container")[4].style.backgroundImage="url('play1.jpg')"
                 }
                 
                 else{
