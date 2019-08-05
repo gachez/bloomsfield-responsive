@@ -263,7 +263,7 @@
         
 /*        sections for the smaller screens such as tablet and mobile*/
         #visionmision-block{
-            
+               
             width: 89.6%;
             height: 54.5%;
         }
@@ -275,8 +275,31 @@ width: 840px;
 height: 420px;
 left: 32.8%;
 top: 120px;
-            background: url('hero.png');
+            object-fit: cover;
         }
+        
+        
+        #hero-image2{
+            position: absolute;
+width: 840px;
+height: 420px;
+left: 32.8%;
+top: 120px;
+            display: none;
+            object-fit: cover;
+        }
+        
+        
+        #hero-image3{
+            position: absolute;
+width: 840px;
+            display: none;
+height: 420px;
+left: 32.8%;
+top: 120px;
+            object-fit: cover;
+        }
+        
         
 /*        about navigation block*/
         #navigation-block-title{
@@ -598,917 +621,124 @@ color: #FFFFFF;
             left: 95.3%;
             top: 33.3%;
         }
+        .small-body-container{
+         display: none;
+        }
+        
+        
+        .body-container{
+            display: block;
+        }
+        
         
         
 /*        media queries down here*/
-           
-        /* Medium devices (landscape tablets, 768px and up) */
         
-/*        styling for the tablet screen sizes and medium screen sizes*/
-@media only screen and (min-width: 768px) and (max-width: 992px)   {
-    .top-navigation-bar{
-        display: none;
-    }
-    
-    #hero-image{
-        display: none;
-    }
-    #navigation-block-title{
-        display: none;
-    }
-    #navigation-items-container{
-        display: none;
-    }
-    
-    #vision-tilte{
-        opacity: 0;
-    }
-    #vision-text{
-        opacity: 0;
-    }
-    #mission-title{
-        opacity: 0;
-    }
-    #mission-text{
-        opacity: 0;
-    }
-    
-    #menu{
-        display: block;
-        height: 6%;
-    }
-    #logo{
-        width: 20%;
-        height: 100%;
-    }
-    #hamburger{
-        width: 4.2%;
-        height: 53.3%;
-        left: 90.6%;
-        top: 23.3%;
-    }
-        
-    #menu-container{
-        width: 127vw;
-        height: 100%;
-    }
-    #menu-logo{
-        width: 20.7%;
-        height: 10.8%;
-    }
-    #close-black{
-        width: 3.3%;
-        height: 3.2%;
-        margin-top: 3.25%;
-    }
-    .menu-items{
-        font-size: 22px;
-    }
-    
-    .expand-block{
-          width: 92%;
-  height: 60px;
-  background-color: #22b14c;
-    }
-    
-/*    vision mision section starts here*/
-    #vmblock{
-        position: absolute;
-        top: 14.5%;
-        left: 17%;
-    }
-    .block-text{
-         
-  height: 25px;
-  font-family: Nunito;
-  font-size: 18px;
-  font-weight: bold;
-  font-style: normal;
-  font-stretch: normal;
-  line-height: normal;
-  letter-spacing: normal;
-  color: white;
-        position: absolute;
-        top: 30%;
-        left: 2.9%;
-    }
-    
-    .up-icon{
-        cursor: pointer;
-        position: absolute;
-        left: 94.5%;
-        margin-top: 3.8%;
-    }
-    
-    .expand-hero{
-        width: 92%;
-        height: 28%;
-    }
-    
-    #vm-hero{
-        position: absolute;
-        top: 20.4%;
-        left: 17%;
-    }
-    #vm-text-block{
-        width: 92%;
-        height: 35%;
-        background-color: #f3f3f3;
-        position: absolute;
-        top: 48.25%;
-        left: 17%;
-    }
-    
-    #vision-title-small{
-          font-family: Nunito;
-  font-size: 18px;
-  font-weight: bold;
-  font-style: normal;
-  font-stretch: normal;
-  line-height: normal;
-  letter-spacing: normal;
-  color: #1a1a1a;
-        margin-left: 5.8%;
-        margin-top: 2.9%;
-    }
-    #vision-text-small{
-        width: 88.4%;  
-        font-family: Nunito;
-  font-size: 18px;
-  font-weight: normal;
-  font-style: normal;
-  font-stretch: normal;
-  line-height: normal;
-  letter-spacing: normal;
-  color: var(--charcoal);
-        margin-left: 5.8%;
-        
-    }
-    
-    #mission-title-small{
-          font-family: Nunito;
-  font-size: 18px;
-  font-weight: bold;
-  font-style: normal;
-  font-stretch: normal;
-  line-height: normal;
-  letter-spacing: normal;
-  color: #1a1a1a;
-        margin-left: 5.8%;
-        margin-top: 2.9%;
-        
-    }
-    
-    #mission-text-small{
-                width: 88.4%;  
-        font-family: Nunito;
-  font-size: 18px;
-  font-weight: normal;
-  font-style: normal;
-  font-stretch: normal;
-  line-height: normal;
-  letter-spacing: normal;
-  color: var(--charcoal);
-        margin-left: 5.8%;
-    }
-/*
-
-    why choose us section
-*/
-    
-    #whychoose-block{
-        position: absolute;
-        top: 85%;
-        left: 17%;
-    }
-    
-    #whychoose-hero{
-        position: absolute;
-        top: 81.75%;
-        left: 17%;
-    }
-    
-    #whychoose-text-block{
-        width: 92%;
-        height: 20%;
-        background-color: #f3f3f3;
-        position: absolute;
-        top: 110%;
-        left: 17%;
-    }
-    
-    #whychoose-text-small{
-        width: 88.4%;
-        font-family: Nunito;
-  font-size: 18px;
-  font-weight: normal;
-  font-style: normal;
-  font-stretch: normal;
-  line-height: 1.29;
-  letter-spacing: normal;
-  color: #1a1a1a;
-        margin-top: 2.9%;
-        margin-left: 5.8%;
-    }
-    
-/*    why chhoose us section ends here*/
-    
-/*    learning section starts here*/
-    #learning-block{
-        position: absolute;
-        top: 142.5%;
-        left: 17%;
-    }
-    
-    #learning-hero{
-        position: absolute;
-        top: 138.25%;
-        left: 17%;
-    }
-    
-    #learning-text-block{
-        width: 92%;
-        height: 25%;
-        background-color: #f3f3f3;
-        position: absolute;
-        top: 166.25%;
-        left: 17%;
-    }
-    
-    #learning-title-small{
-        
-          font-family: Nunito;
-  font-size: 18px;
-  font-weight: bold;
-  font-style: normal;
-  font-stretch: normal;
-  line-height: normal;
-  letter-spacing: normal;
-  color: #1a1a1a;
-        margin-left: 5.8%;
-        margin-top: 2.9%;
-    }
-    
-    #learning-text-small{
-        width: 88.4%;
-                 font-family: Nunito;
-  font-size: 18px;
-  font-weight: normal;
-  font-style: normal;
-  font-stretch: normal;
-  line-height: normal;
-  letter-spacing: normal;
-  color: #1a1a1a;
-        margin-left: 5.8%;
-        margin-top: 2.9%;
-        
-    }
-    
-    #footer{
-        display: none;
-    }
-    
-  /*        footer styling code */
-        #footer-small{
-            position: absolute;
-          top: 200%;   
-              width: 127.5vw;
-        height: 75px;
-        background-color: #22b14c;
-        }
-        
-        #copyright-word-small{
-            position: absolute;
-width: 83px;
-height: 25px;
-left: 40px;
-top: 33.3%;
-
-font-family: Nunito;
-font-style: normal;
-font-weight: bold;
-font-size: 18px;
-line-height: normal;
-
-color: #FFFFFF;
-        }
-        
-        #copy-icon-small{
-            
-position: absolute;
-width: 15px;
-height: 25px;
-left: 128px;
-top: 33.3%;
-            
-font-family: Nunito;
-font-style: normal;
-font-weight: bold;
-font-size: 18px;
-line-height: normal;
-text-align: center;
-
-color: #FFFFFF;
-        }
-        
-        #footer-text-small{
-            position: absolute;
-width: 378px;
-height: 25px;
-left: 148px;
-top: 33.3%;
-
-font-family: Nunito;
-font-style: normal;
-font-weight: bold;
-font-size: 18px;
-line-height: normal;
-
-color: #FFFFFF;
-        }
-        
-/*        should redirect to school facebook page*/
-        #facebook-logo-small{
-            position: absolute;
-            left: 95.3%;
-            top: 33.3%;
-        } }
-        
-        @media only screen and (min-width: 1024px){
-            .expand-block{
+        @media only screen and (max-width: 992px){
+            .body-container{
                 display: none;
             }
-            
-            #mission-title-small{
-                display: none;
+            .small-body-container{
+                width: 100%;
+                height: 100%;
+                display: grid;
+                grid-template-rows: repeat(5,1fr);
+                grid-row-gap: 80px;
             }
             
-            #mission-text-small{
-                display: none;
+            .small-top-bar{
+                grid-row: 1;
+                width: 100%;
+                height: 90px;
+                background-color: white;
+                display: grid;
+                grid-template-columns: repeat(6,1fr);
             }
             
-            #whychoose-text-small{
-                display: none;
-            }
-            #learning-text-block{
-                display: none;
+            #small-logo{
+                grid-column: 1/4;
             }
             
-            #footer-small{
-                display: none;
+            #menu-bars{
+                grid-column:6;
+                margin-top: 25px;
+                cursor: pointer;
             }
-        }
-        
-        /* Extra small devices (phones, 600px and down) */
-@media only screen and (max-width: 767px) {
-        .top-navigation-bar{
-        display: none;
-    }
-    
-    #hero-image{
-        display: none;
-    }
-    #navigation-block-title{
-        display: none;
-    }
-    #navigation-items-container{
-        display: none;
-    }
-    
-    #vision-tilte{
-        opacity: 0;
-    }
-    #vision-text{
-        opacity: 0;
-    }
-    #mission-title{
-        opacity: 0;
-    }
-    #mission-text{
-        opacity: 0;
-    }
-    
-    #menu{
-        display: block;
-        height: 6%;
-    }
-    #logo{
-        width: 25.3%;
-        height: 100%;
-    }
-    #hamburger{
-        width: 7.9%;
-        height: 63.3%;
-        left: 85.4%;
-        top: 23.3%;
-    }
-        
-    #menu-container{
-        width: 231vw;
-        height: 160%;
-    }
-    #menu-logo{
-        width: 25.7%;
-        height: 10.8%;
-    }
-    #close-black{
-        width: 4.3%;
-        height: 3%;
-        margin-top: 3.75%;
-    }
-    .menu-items{
-        font-size: 28px;
-    }
-    
-    .expand-block{
-          width: 192%;
-  height: 60px;
-  background-color: #22b14c;
-    }
-    
-/*    vision mision section starts here*/
-    #vmblock{
-        position: absolute;
-        top: 24.5%;
-        left: 17%;
-    }
-    .block-text{
-         
-  height: 25px;
-  font-family: Nunito;
-  font-size: 18px;
-  font-weight: bold;
-  font-style: normal;
-  font-stretch: normal;
-  line-height: normal;
-  letter-spacing: normal;
-  color: white;
-        position: absolute;
-        top: 30%;
-        left: 2.9%;
-    }
-    
-    .up-icon{
-        position: absolute;
-        left: 94.5%;
-        margin-top: 3.8%;
-    }
-    
-    .expand-hero{
-        width: 192%;
-        height: 42.5%;
-    }
-    
-    #vm-hero{
-        position: absolute;
-        top: 34%;
-        left: 17%;
-    }
-    #vm-text-block{
-        width: 192%;
-        height: 56%;
-        background-color: #f3f3f3;
-        position: absolute;
-        top: 77.25%;
-        left: 17%;
-    }
-    
-    #vision-title-small{
-          font-family: Nunito;
-  font-size: 18px;
-  font-weight: bold;
-  font-style: normal;
-  font-stretch: normal;
-  line-height: normal;
-  letter-spacing: normal;
-  color: #1a1a1a;
-        margin-left: 5.8%;
-        margin-top: 2.9%;
-    }
-    #vision-text-small{
-        width: 88.4%;  
-        font-family: Nunito;
-  font-size: 18px;
-  font-weight: normal;
-  font-style: normal;
-  font-stretch: normal;
-  line-height: normal;
-  letter-spacing: normal;
-  color: var(--charcoal);
-        margin-left: 5.8%;
-        
-    }
-    
-    #mission-title-small{
-          font-family: Nunito;
-  font-size: 18px;
-  font-weight: bold;
-  font-style: normal;
-  font-stretch: normal;
-  line-height: normal;
-  letter-spacing: normal;
-  color: #1a1a1a;
-        margin-left: 5.8%;
-        margin-top: 2.9%;
-        
-    }
-    
-    #mission-text-small{
-                width: 88.4%;  
-        font-family: Nunito;
-  font-size: 18px;
-  font-weight: normal;
-  font-style: normal;
-  font-stretch: normal;
-  line-height: normal;
-  letter-spacing: normal;
-  color: var(--charcoal);
-        margin-left: 5.8%;
-    }
-/*
-
-    why choose us section
-*/
-    
-    #whychoose-block{
-        position: absolute;
-        top: 139%;
-        left: 17%;
-    }
-    
-    #whychoose-hero{
-        position: absolute;
-        top: 148.25%;
-        left: 17%;
-    }
-    
-    #whychoose-text-block{
-        width: 192%;
-        height: 30%;
-        background-color: #f3f3f3;
-        position: absolute;
-        top: 190.5%;
-        left: 17%;
-    }
-    
-    #whychoose-text-small{
-        width: 88.4%;
-        font-family: Nunito;
-  font-size: 18px;
-  font-weight: normal;
-  font-style: normal;
-  font-stretch: normal;
-  line-height: 1.29;
-  letter-spacing: normal;
-  color: #1a1a1a;
-        margin-top: 2.9%;
-        margin-left: 5.8%;
-    }
-    
-/*    why chhoose us section ends here*/
-    
-/*    learning section starts here*/
-    #learning-block{
-        position: absolute;
-        top: 226.5%;
-        left: 17%;
-        
-    }
-    
-    #learning-hero{
-        position: absolute;
-        top: 235%;
-        left: 17%;
-    }
-    
-    #learning-text-block{
-        width: 192%;
-        height: 25%;
-        background-color: #f3f3f3;
-        position: absolute;
-        top: 278.5%;
-        left: 17%;
-    }
-    
-    #learning-title-small{
-        
-          font-family: Nunito;
-  font-size: 18px;
-  font-weight: bold;
-  font-style: normal;
-  font-stretch: normal;
-  line-height: normal;
-  letter-spacing: normal;
-  color: #1a1a1a;
-        margin-left: 5.8%;
-        margin-top: 2.9%;
-    }
-    
-    #learning-text-small{
-        width: 88.4%;
-                 font-family: Nunito;
-  font-size: 18px;
-  font-weight: normal;
-  font-style: normal;
-  font-stretch: normal;
-  line-height: normal;
-  letter-spacing: normal;
-  color: #1a1a1a;
-        margin-left: 5.8%;
-        margin-top: 2.9%;
-        
-    }
-    
-    #footer{
-        display: none;
-    }
-    
-  /*        footer styling code */
-        #footer-small{
-            position: absolute;
-          top: 310%;   
-              width: 230%;
-        height: 75px;
-        background-color: #22b14c;
-        }
-        
-        #copyright-word-small{
-            position: absolute;
-width: 83px;
-height: 25px;
-left: 40px;
-top: 33.3%;
-
-font-family: Nunito;
-font-style: normal;
-font-weight: bold;
-font-size: 18px;
-line-height: normal;
-
-color: #FFFFFF;
-        }
-        
-        #copy-icon-small{
             
-position: absolute;
-width: 15px;
-height: 25px;
-left: 128px;
-top: 33.3%;
+            #vision-mision-block{
+                width: 75%;
+                grid-row: 2;    
+                display: grid;
+                grid-template-rows: repeat(12,1fr)
+                margin-top: 100px;
+                margin: auto;
+            }
             
-font-family: Nunito;
-font-style: normal;
-font-weight: bold;
-font-size: 18px;
-line-height: normal;
-text-align: center;
-
-color: #FFFFFF;
-        }
-        
-        #footer-text-small{
-            position: absolute;
-width: 378px;
-height: 25px;
-left: 148px;
-top: 33.3%;
-
-font-family: Nunito;
-font-style: normal;
-font-weight: bold;
-font-size: 18px;
-line-height: normal;
-
-color: #FFFFFF;
-        }
-        
-/*        should redirect to school facebook page*/
-        #facebook-logo-small{
-            position: absolute;
-            left: 95.3%;
-            top: 33.3%;
-        } 
-    
-        }
-        
-/*        extra small devices */
-        @media only screen and (max-width: 350px){
+            #vision-mission-nav{
+                
+                grid-row: 1;
+                width: 100%;
+                background-color: #22B14C;;
+                display: grid;
+                grid-template-columns: repeat(6,1fr);
+            }
             
-            #vm-text-block{
-                height: 70.95%;
+            #vision-mission-nav-text{
+                grid-column: 1/4;
+                
+                font-family: Nunito;
+                font-style: normal;
+                font-weight: bold;
+                font-size: 16px;
+                line-height: 22px;
+                color: #ffffff;
+                margin-top: 15px;
+                margin-left: 30px;
                 
             }
             
-            #whychoose-block{
-                top: 150.95%;
+            .up{
+                grid-column: -1;
+                margin-top: 20px;
+                margin-right: 30px;
+                   
             }
             
-            #whychoose-hero{
-                top: 160.5%;
-            }
-            #whychoose-text-block{
-                top: 200.5%;
-                height: 38.5%;
-            }
-            
-            #learning-block{
-                top: 241.5%;
+            #vision-mission-hero{
+                width: 100%;
+                grid-row: 2/4;
+                height: 31.25rem;
+                object-fit: cover;
             }
             
-            #learning-hero{
-                top: 252%;
+            #vision-mission-paragraph{
+                background: ;
+                width: 100%;
+                grid-row: 4/11;
+                background: #F3F3F3;
             }
             
-            #learning-text-block{
-                top: 295.5%;
-                height: 30.5%
-                    
-            }
-            
-            
-            
-            #footer-small{
-                top: 331.75%;
-                width: 260%;
+            #vision-mission-paragraph-text{
+
+            font-family: Nunito;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 14px;
+            line-height: 21px;
+            margin-left: 20px;    
             }
         }
-        
-        @media only screen and (min-height: 750px ) and (max-height: 830px){
-           
-            #vm-hero{
-                top: 31.8%
-            }
-            
-            #vm-text-block{
-                top: 70.75%;
-            }
-            
-            #whychoose-hero{
-                top: 126.5%;
-            }
-            
-            #whychoose-text-block{
-                top: 165.55%;
-            }
-            
-            #learning-hero{
-                top: 212%;
                 
-            }
-            
-            #learning-text-block{
-                top: 250.5%;
-            }
-        }
-        
-        @media screen and (max-width: 767px) and (orientation: landscape){
-            #close-black{
-                width: 48px;
-                height: 48px;
-                top: 10px;
-            }
-            #menu{
-                height: 10.5%;
-            }
-            
-            #logo{
-                width: 20%;
-                height: 100%
-            }
-            #hamburger{
-                width: 64px;
-                height: 64px;
-                top: 15%;
-            }
-            .up-icon{
-                margin-top: 1.8%;
-            }
-            
-            
-            #vmblock{
-                top: 40%;
-            }
-            
-            .expand-hero{
-                height: 55%;    
-            }
-            
-            #vm-hero{
-                top: 56.5%;
-                
-            }
-            
-            #vm-text-block{
-                top: 112.5%;
-                height: 79.75%;
-            }
-            
-            #whychoose-block{
-                top: 199%;
-            }
-            
-            #whychoose-hero{
-                top: 194.55%;
-            }
-            
-            #whychoose-text-block{
-                top: 250.5%;
-                height: 40%;
-            }
-            
-            #learning-block{
-               top: 299%;
-            }
-            
-            #learning-hero{
-                top: 315.95%;
-            }
-            
-            #learning-text-block{
-                top: 371.5%;
-                height: 46.5%;
-                margin-right: 50%;
-            }
-            
-            #footer-small{
-                top: 435%;
-                
-            }
-        }
-        
-        @media only screen and (min-width: 800px) and (max-width: 830px){
-            #close-black{
-                width: 18px;
-                height: 18px;
-            }
-            
-            #menu{
-                height: 60px;
-            }        
-            
-            #hamburger{
-                width: 38px;
-                height: 38px;
-            }
-            
-            #vmblock{
-                top: 27%;
-                
-            }
-            
-            .expand-hero{
-                height: 55%;
-            }
-            
-            #vm-hero{
-                top: 41.65%;
-            }
-            
-            #vm-text-block{
-                top: 96.75%;
-                height: 60%;
-            }
-            
-            #whychoose-block{
-                top: 165%;
-            }
-            #whychoose-hero{
-                top: 179.65%;
-            }
-            
-            #whychoose-text-block{
-                top: 235%;
-                height: 48%;
-            }
-            
-            #learning-block{
-                top: 290%;
-            }
-            
-            #learning-hero{
-                top: 304.75%;
-            }
-            
-            #learning-text-block{
-                top: 359.75%;
-                height: 40%
-            }
-            
-            #footer-small{
-                top: 410%;
-            }
-        }
-        
-        
     </style>
     </head>
     <body>
+       <div class="body-container">  
 <!--this is the menu for tablet and smaller screens-->
         <!--        menu stsarts here-->
     <div id="menu">
         <img id="logo" src="logo.png"/>
         <a href="#">
-        <img onclick="onHamburgerClick()" id="hamburger" src="hamburger.jpg"/>    
+        <img onclick="onHamburgerClick()" id="hamburger" src="menu.png"/>    
         </a>
         </div>
 <!--        menu ends here-->
@@ -1557,102 +787,14 @@ color: #FFFFFF;
 <!--        ends here-->
         
         
-<!--        vision mission block for mobile and tablet -->
-        <div class="expand-block"  id="vmblock">
-        <p class="block-text" id="vmblock-text">Vision and Mission</p>
-            <img src="icon-up.jpg" id="upvm" class="up-icon"  style="z-index: 999;">
-            <img src="ico-down-green.png"  class="up-icon"/>
-        </div>
-        <img class="expand-hero" src="hero.png" id="vm-hero" />
-        <div id="vm-text-block">
-        <p id="vision-title-small">Vision</p>
-            <p id="vision-text-small">
-            To be the school of choice and the leading performer in providing quality education founded on Christian principles.
-            </p>
-            
-            <p id="mission-title-small">Mission</p>
-            <p id="mission-text-small">
-            To provide holistic education in a conducive environment that develops the children’s physical, mental, social and spiritual faculties.<br>
-        Identifying and nurturing talents and creativity at a young age using modern teaching methods.<br>
-Inculcating high moral values that will enrich the children to grow with self-esteem, integrity and positive demeanour.<br>
-Motivating students to achieve their full potential
-            </p>
-            
-        </div>
-<!--
-        
-        vision mission block ends here
--->
-        
-        
-                        
-<!--        why choose us block for mobile and tablet -->
-        <div class="expand-block" id="whychoose-block">
-        <p class="block-text">Why choose us</p>
-            <img src="icon-up.jpg" id="whyChooseUpBtn" class="up-icon" style="z-index: 999;">
-            <img src="ico-down-green.png"  id="whyChooseDownBtn" style="z-index: 998;" class="up-icon"/>
-        </div>
-        <img class="expand-hero" id="whychoose-hero" src="hero.png"/>
-        <div id="whychoose-text-block">
-   
-            <p id="whychoose-text-small">
-            Pillared on Christian principles, our programs and learning experiences are directed towards developing young children into self-disciplined individuals with high moral values and self-esteem, hardworking future problem solvers.
-
-We also pay close attention to the children entrusted in our care. We have ensured that our compound is as secure as possible. A 24 hr security guard is present at the gate. We also have a designated staff member to ensure that pick-ups and drops are supervised.
-            </p>
-            
-            
-        </div>
-<!--
-        
-        why choose us block ends here
--->
-
-        <!--        learning block for mobile and tablet -->
-        <div class="expand-block" id="learning-block">
-        <p class="block-text">Learning</p>
-            <img src="icon-up.jpg" class="up-icon" id="learningBtn"  style="z-index: 999;">
-            <img src="ico-down-green.png"  class="up-icon" style="z-index: 998;"/>
-        </div>
-        <img class="expand-hero" id="learning-hero" src="hero.png"/>
-        <div id="learning-text-block">
-   
-            <p id="learning-title-small">Curriculum</p>
-            <p id="learning-text-small">
-            At Bloomsfield, we offer the new Kenya National Curriculum, 2:6:6:3, as well as prepare children for International systems of education. Our classes are as follows:
-
-            
-Playgroup 1
-Playgroup 2
-Beginner
-PP1
-PP2
-Grade 1
-                
-                
-            </p>
-            
-            
-        </div>
-<!--
-        
-        learning block ends here
--->
 
         
-<!--        footer set for down here-->
-        <footer id="footer-small">
-         <p id="copyright-word-small">Copyright</p>
-            <p id="copy-icon-small">&copy;</p>
-            <p id="footer-text-small">2019. Bloomsfield School. All rights reserved. </p>
-            <img id="facebook-logo-small" src="ico_facebook.png" />
-        </footer>
-        
-        
-<!--      hero image-->
-        <div id="hero-image">
        
-        </div>
+<!--      hero image-->
+        <img id="hero-image" src="career.jpg"/>
+        <img id="hero-image2" src="play4.jpg"/>
+        <img id="hero-image3" src="computer1.jpg"/>
+       
 <!--        about block section-->
         <section id="navigation-block-title">
             About Us
@@ -1690,7 +832,15 @@ We also pay close attention to the children entrusted in our care. We have ensur
         Curriculum
         </p>
         <p id="curiculum-text">
-        At Bloomsfield, we offer the new Kenya National Curriculum, 2:6:6:3, as well as prepare children for International systems of education.
+        At Bloomsfield, we offer the new Kenya National Curriculum, 2:6:6:3, as well as prepare children for International systems of education.  Our classes are as follows:
+
+           <br /> <br />
+<strong>Playgroup 1</strong><br />
+<strong>Playgroup 2</strong><br />
+<strong>Beginner</strong><br />
+<strong>PP1</strong><br />
+<strong>PP2</strong><br />
+<strong>Grade 1</strong>
         </p>
         
 <!--
@@ -1703,7 +853,8 @@ We also pay close attention to the children entrusted in our care. We have ensur
         <div class="box" id="grade2">Grade 2</div>
 -->
 <!--        ends-->
-        
+       
+            
         <!--        footer-->
         <footer id="footer">
         <p id="copyright-word">Copyright</p>
@@ -1711,6 +862,65 @@ We also pay close attention to the children entrusted in our care. We have ensur
             <p id="footer-text">2019. Bloomsfield School. All rights reserved. </p>
             <img id="facebook-logo" src="ico_facebook.png" />
         </footer>
+         </div> 
+      
+<!--        for mobiles and small devices-->
+        <div class="small-body-container">
+            
+<!--            top bar container-->
+            
+            <div class="small-top-bar">
+            <img id="small-logo" src="logo.png"/>
+            <img id="menu-bars" src="menu.png"/>    
+            </div>
+<!--            top bar ends here-->
+            
+<!--        vision and mission block-->
+            <section id="vision-mision-block">
+            <div id="vision-mission-nav">
+            <p id="vision-mission-nav-text">Vision & mission</p>
+            <img class="up" src="ico-up.svg"/>    
+            </div>
+            <img id="vision-mission-hero" src="career.jpg"/>
+            <div id="vision-mission-paragraph">
+            <p id="vision-mission-paragraph-text">
+                <strong>Vision</strong><br /><br />
+                To be the school of choice and the leading performer in providing quality education founded on Christian principles.
+                <br /><br />
+                <strong>Mission</strong><br /><br />
+                To provide holistic education in a conducive environment that develops the children’s physical, mental, social and spiritual faculties.
+                </p>
+            </div>
+            </section>
+            
+<!--            why choose us block-->
+            <section id="why-choose-block">
+            <div id="why-choose-nav">
+            <p id="why-choose-nav-text">Why choose us</p>
+            <img src="ico-up.svg"/>    
+            </div>
+            <img src="play4.jpg"/>
+            <div id="why-choose-paragraph">
+            <p id="why-choose-paragraph-text">
+                Pillared on Christian principles, our programs and learning experiences are directed towards developing young children into self-disciplined individuals with high moral values and self-esteem, hardworking future problem solvers. We also pay close attention to the children entrusted in our care. We have ensured that our compound is as secure as possible. A 24 hr security guard is present at the gate. We also have a designated staff member to ensure that pick-ups and drops are supervised.
+                </p>
+            </div>
+            </section>
+            
+<!--            learning block-->
+            <section id="learning-block">
+            <div id="learning-nav">
+            <p id="learning-nav-text">Learning</p>
+            <img src="ico-up.svg"/>    
+            </div>
+            <img src="computer2.jpg"/>
+            <div id="learning-paragraph">
+            <p id="learning-paragraph-text">
+             At Bloomsfield, we offer the new Kenya National Curriculum, 2:6:6:3, as well as prepare children for International systems of education. Our classes are as follows: Playgroup 1 Playgroup 2 Beginner PP1 PP2 Grade 1
+                </p>
+            </div>
+            </section>
+        </div>
         <script>
          
 //            variables for the mission and vision elements
@@ -1735,6 +945,10 @@ We also pay close attention to the children entrusted in our care. We have ensur
                     
                        document.getElementById("footer").style.top="180%"
                     navSelect([visionTitle,visionText,missionText,missionTitle])
+                    
+                    document.getElementById('hero-image').style.display='block'
+                    document.getElementById('hero-image2').style.display='none'
+                    document.getElementById('hero-image3').style.display='none'
                 }
                 
                 
@@ -1747,6 +961,10 @@ We also pay close attention to the children entrusted in our care. We have ensur
                 const whyChooseUsSelect = () =>{
                     whyChooseNav.style.color = 'green'
                     navSelect([ whyChooseUsText])
+                    document.getElementById('hero-image').style.display='none'
+                    document.getElementById('hero-image2').style.display='block'
+                    document.getElementById('hero-image3').style.display='none'
+                    
                 }
                 
 //             variables for the learning nav item and body
@@ -1762,6 +980,11 @@ We also pay close attention to the children entrusted in our care. We have ensur
 
                 
                 navSelect([curriculum, curriculumText])
+                
+                
+                    document.getElementById('hero-image').style.display='none'
+                    document.getElementById('hero-image2').style.display='none'
+                    document.getElementById('hero-image3').style.display='block'
             }
             
 //            function to control overlapping of the different bodies...works like a charm for the learning option
@@ -2109,6 +1332,19 @@ We also pay close attention to the children entrusted in our care. We have ensur
             
         
       
+        const hideImage = () =>{
+            if(screen.width <= 768){
+                document.getElementById('hero-image').style.display='none'
+            }
+            
+            else{
+                console.log('okay big screen')
+            }
+        }
+        
+        
+        
+        window.onload= hideImage
         
         
         </script>

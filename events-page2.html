@@ -1,0 +1,696 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+    <title>
+        Bloomsfield School and Kindergarten
+        </title>
+               <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    </head>
+    <style>
+     html{
+            font-size: 16px;
+            
+        }
+        body{
+            height: 100%;
+            width: 100%;
+            padding: 0;
+            margin: 0;
+        }
+        
+        .top-navigation-bar{
+            display: none;
+        }
+        
+          #menu{
+            position: fixed;
+            top: 0;
+            z-index: 999;
+            width: 100%;
+            height: 60px;
+              box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.15);
+  background-color: #ffffff;
+        }
+        
+        #logo{
+            position: absolute;
+            left: 5.6%;
+            top: 21.7%;
+            width: 91px;
+            height: 34px;
+        }
+        
+        #hamburger{
+           width: 32px;
+           height: 32px;
+            position: absolute;
+            left: 85.6%;
+            top: 14px;
+    
+        }
+        
+      
+        
+                     /* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) and (max-width: 992px) {
+    
+    #hamburger{
+        left: 90.6%;
+    }
+    
+    #logo{
+        top: 0;
+         width: 159px;
+  height: 60px;
+    }
+        }
+        
+        
+      
+        
+      /*        styling for the menu goes here*/
+        #menu-container{
+          display: none;
+            position: absolute;
+            top: 0;
+            width: 100%;
+            height: 100vh;
+            z-index: 9999;
+              box-shadow: 0 1px 6px 0 rgba(0, 0, 0, 0.25);
+  background-color: #ffffff;
+        }
+        
+        #menu-logo{
+                        position: absolute;
+            left: 5.6%;
+            top: 2.7%;
+            width: 20.7%;
+            height: 7.8%;
+        }
+        
+        #close-black{
+            width: 4%;
+            height: 2.8%;
+            position: absolute;
+            top: 5.7%;
+            left: 87.5%;
+        }
+        #menu-container a{
+            
+            text-decoration: none;
+             
+  height: 25px;
+  font-family: Nunito;
+  font-size: 18px;
+  font-weight: bold;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #1a1a1a;
+        }
+        
+        #home{
+            position: absolute;
+            width: 100%;
+            top: 22.4%;
+            text-align: center;
+            
+        }
+        
+        #home:hover{
+            color: #22b14c;
+        }
+        
+                #about{
+            position: absolute;
+            width: 100%;
+            top: 38.2%;
+            text-align: center;
+            
+        }
+        
+        #about:hover{
+             color: #22b14c;
+        }
+             #gallery{
+            position: absolute;
+            width: 100%;
+            top: 52.8%;
+            text-align: center;
+            
+        }
+        
+        #gallery:hover{
+            color: #22b14c;
+        }
+        
+             #events{
+            position: absolute;
+            width: 100%;
+            top: 68.6%;
+            text-align: center;
+            
+        }
+        
+        #events:hover{
+           color: #22b14c;
+        }
+        
+             #contacts{
+            position: absolute;
+            width: 100%;
+            top: 84.3%;
+            text-align: center;
+            
+        }
+        
+        #contacts:hover{
+            color: #22b14c;       
+         }
+/*
+        
+        menu ends here
+*/
+        
+/*        event title*/
+        #event-title{
+            position: absolute;
+            top: 14.6%;
+            left: 5.6%;
+              font-family: Nunito;
+  font-size: 18px;
+  font-weight: bold;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #1a1a1a;
+        }
+        
+                             /* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) and (max-width: 992px) {
+    
+    #event-title{
+        top: 10%;
+          width: 89.6%;
+  height: 52px;
+  font-family: Nunito;
+  font-size: 32px;
+  font-weight: 600;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.39;
+  letter-spacing: normal;
+  color: var(--charcoal);
+    }
+        }
+        
+        .box{
+              width: 150px;
+  height: 62px;
+  border: solid 1px #1a1a1a;
+        }
+        
+        
+        #box1{
+            
+            position: absolute;
+            top:27.3% ;
+            left: 5.6%;
+        }
+        .box-title{
+              font-family: Nunito;
+  font-size: 14px;
+  font-weight: bold;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.29;
+  letter-spacing: normal;
+  color: #1a1a1a;
+            position: absolute;
+            top: 9px;
+            left: 10px;
+        }
+        
+        .box-body{
+              font-family: Nunito;
+  font-size: 14px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.29;
+  letter-spacing: normal;
+  color: #1a1a1a;
+            position: absolute;
+            top: 31px;
+            left: 10px;
+        }
+        
+        #box2{
+            
+            position: absolute;
+            top:27.3% ;
+            left: 52.8%;
+        }
+        
+        #box3{
+            position: absolute;
+            top: 40.2%;
+            left: 5.6%;
+        }
+        
+        
+
+        
+        #explanation{
+             font-family: Nunito;
+  font-size: 16px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.29;
+  letter-spacing: normal;
+  color: #1a1a1a;
+             width: 320px;
+  height: 127px;
+            position: absolute;
+            top: 60.4%;
+            left: 5.6%;
+        }
+/*
+
+        medium devices tablets
+*/
+                @media only screen and (min-width: 768px) and (max-width: 992px) {
+            
+            .box{
+                  width: 22.3%;
+  height: 74px;
+  border: solid 1px #1a1a1a;
+            }
+            
+            #box1{
+                top: 20%;
+            }
+            
+            #box2{
+                top: 20%;
+                left: 30.1%;
+            }
+            
+            #box3{
+                top: 20%;
+                left: 54.9%;
+            }
+                    
+                    #explanation{
+                         width: 89.6%;
+  height: 73px;
+  font-family: Nunito;
+  font-size: 16px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.29;
+  letter-spacing: normal;
+  color: #1a1a1a;
+                        top: 30%;
+                    }        
+        }
+        
+        
+                          /*        footer section*/
+        #footer{
+            
+    position: absolute;
+            top: 92.5%;
+                   width: 100%;
+  height: 50px;
+  background-color: #22b14c;
+        }
+        #copyright{
+        padding-top: 18px;
+            padding-left: 20px;
+  height: 14px;
+  font-family: Nunito;
+  font-size: 10px;
+  font-weight: 600;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #ffffff;
+        }
+        
+        #fb-icon{
+            width: 16px;
+            height: 16px;
+            position: absolute;
+            left: 90%;
+            bottom: 15px;
+        }
+        
+        @media only screen and (min-width: 1024px){
+            #menu{
+                display: none;
+            }
+            
+                           /*        menu bar*/
+    .top-navigation-bar 
+        {
+            position: fixed;
+            top: 0;
+            display: block;
+            width: 100%;
+            height: 80px;
+            box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.15);
+            background-color: white;
+            z-index: 999;
+        }
+        
+/*        menu bar navigation items*/
+        .top-navigation-bar a
+        {
+            text-decoration: none;
+            font-family: 'Nunito', sans-serif;
+            font-size: 1.35rem;
+            font-weight: bold;
+            font-style: normal;
+            font-stretch: normal;
+            line-height: 1.41;
+            letter-spacing: normal;
+            color: #5a5a5a;
+        }
+        
+/*        logo in menu bar*/
+        #logo-web{
+            position: absolute;
+            left: 2.9%;
+              width: 13.313rem;
+  height: 5rem;
+        }
+        
+        
+/*        menu links*/
+        #home-web{
+            position: absolute;
+            left: 57.2%;
+            top: 26.3%;
+        }
+        
+/*        on hover*/
+        #home-web:hover{
+            color: #22b14c;
+        }
+        
+/*        on active*/
+        #home-web:active{
+            color: #22b14c;
+        }
+        
+        #about-web{
+            position: absolute;
+            left: 64.6%;
+            top: 26.3%;
+        }
+        
+        
+/*        on hover*/
+        #about-web:hover{
+            color: #22b14c;
+        }
+        
+        #gallery-web{
+            position: absolute;
+            left: 74.4%;
+            top: 26.3%;
+        }
+        
+        
+/*        on hover*/
+        #gallery-web:hover{
+            color: #22b14c;
+        }
+        
+        #events-web{
+            position: absolute;
+            left: 82.6%;
+            top: 26.3%;
+        }
+        
+        
+/*        on hover*/
+        #events-web:hover{
+            color: #22b14c;
+        }
+        
+        #contacts-web{
+            position: absolute;
+            left: 90.5%;
+            top: 26.3%;
+        }
+        
+/*        on hover*/
+        #contacts-web:hover{
+            color: #22b14c;
+        }
+/*        menu links end*/
+   
+            #event-title{
+                font-size: 40px;
+                top: 25%;
+            }    
+            
+            .box{
+                width: 16.5%;
+                height: 9.8%;
+                
+            }
+            
+            .box-title{
+                font-size: 18px;
+            }
+            
+            .box-body{
+                font-size: 18px;
+                top: 58%;
+            }
+            
+            #box1{
+                top: 38%;
+            }
+            #box2{
+                top: 38%;
+                left: 22%;
+                
+            }
+            #box3{
+                top: 38%;
+                left: 38.5%;
+            }
+            
+            #explanation{
+                width: 68%;
+                font-size: 24px;
+                height: 18.5%;
+            }
+            
+               
+              #footer{
+                top: 100%;
+                height: 70px;
+            }
+            
+            #copyright{
+                padding-left: 40px;
+                padding-top: 25px;
+                font-family: Nunito;
+                font-size: 18px;
+                font-weight: bold;
+                font-style: normal;
+                font-stretch: normal;
+                line-height: normal;
+                letter-spacing: normal;
+                color: #ffffff;
+            }
+            
+            #fb-icon{
+                width: 24px;
+                height: 24px;
+            left: 95.3%;
+            top: 33.3%;
+            }
+            
+        }
+        
+         
+           @media only screen and (max-width: 767px) and (orientation: landscape){
+        
+               #event-title{
+                   top: 22.5%;
+               }
+               
+               #box1{
+                   top: 34.5%;
+               }
+               
+               #box2{
+                   top: 34.5%;
+                   left: 32.95%
+               }
+               
+               #box3{
+                   top: 34.5%;
+                   left: 60.25%;
+               }
+               
+               #footer{
+                   top: 110%;
+               }
+        }
+        
+        
+        @media only screen and (min-width: 800px) and (max-width: 830px){
+            
+            #event-title{
+                top: 21.5%;
+            }
+            
+            #box1{
+                top: 35%;
+            }
+            
+            #box2{
+                top: 35%;
+            }
+            
+            #box3{
+                
+                top: 35%;
+            }
+            
+            #explanation{
+                top: 60%;
+            }
+        }
+    </style>
+    <body>
+  
+                   <!--        the top navigation bar-->
+    <div class="top-navigation-bar">
+        <img id="logo-web" src='logo.png'/>
+       <a id="home-web" href="index.html">
+        <p>Home</p>
+        </a>
+         <a id="about-web" href="about-us.html">
+        <p>About Us</p>
+        </a>
+         <a id="gallery-web" href="gallery.html">
+        <p>Gallery</p>
+        </a>
+         <a id="events-web" href="events.html">
+        <p>Events</p>
+        </a>
+         <a id="contacts-web" href="contact-us.html">
+        <p>Contacts</p>
+        </a>
+        </div>
+<!--        ends here-->
+   
+        
+     <!--        menu stsarts here-->
+    <div id="menu">
+        <img id="logo" src="logo.png"/>
+        <a href="#"><img onclick="onHamburgerClick()" id="hamburger" src="hamburger.jpg"/></a>    
+        </div>
+<!--        menu ends here-->
+        
+        <!--        menu container-->
+        <div id="menu-container">
+        <img onclick="closeMenu()" id="close-black" src="close.png"/>
+       
+             <img id="menu-logo" src="logo.png"/>
+        
+         <a id="home" href="index.html">
+        <p>Home</p>
+        </a>
+         <a id="about" href="about-us.html">
+        <p>About Us</p>
+        </a>
+         <a id="gallery" href="gallery.html">
+        <p>Gallery</p>
+        </a>
+         <a id="events" href="events.html">
+        <p>Events</p>
+        </a>
+         <a id="contacts" href="contact-us.html">
+        <p>Contacts</p>
+        </a>
+        </div>
+<!--        menu container ends here-->  
+        
+<!--        event title-->
+        <p id="event-title">Musical Concert and Closing Day</p>
+        
+<!--        date-->
+        <div id="box1" class="box">
+        <p class="box-title">DATE</p>
+        <p class="box-body">Wed,Jul 31,2019</p>
+        </div>
+        
+        <!--        time-->
+        <div id="box2" class="box">
+        <p class="box-title">TIME</p>
+        <p class="box-body">9:00 AM - 12 Noon</p>
+        </div>
+        
+        <!--        venue-->
+        <div id="box3" class="box">
+        <p class="box-title">VENUE</p>
+        <p class="box-body">Bloomsfield School</p>
+        </div>
+        
+        <p id="explanation">
+            Parents are encouraged to come early and be with their children during this day. The event will be wonderful and will be a nice wrap for the enjoyable term.<br /><br />
+            <strong>Kindly note:</strong> The school will remain open for daycare services.
+        </p>
+        
+        
+                    <div id="footer">
+        <p id="copyright">Copyright &copy; 2019. Bloomsfield School. All rights reserved.</p>
+            <img id="fb-icon" src="ico_facebook.png"/>
+         
+        </div>
+        
+        
+        
+                          <script>
+            
+//            code for menu functionality
+        let hamburger = document.getElementById("hamburger")
+        let menu = document.getElementById("menu-container")
+
+        
+        const onHamburgerClick = () =>{
+            menu.style.display="block"
+            
+        }
+        
+        const closeMenu = () =>{
+            menu.style.display="none"
+        }
+        
+        //ends here
+        
+//        
+//        cooode to toggle the blocks
+  
+        
+        </script>
+   
+    </body>
+</html>
