@@ -132,7 +132,7 @@ text-align: center;
         }
         
         #welcome-title{
-            margin: auto;
+          
             
 font-family: Nunito;
 font-style: normal;
@@ -142,7 +142,7 @@ line-height: 3.4375rem;
         }
         
         #welcome-paragraph{
-            margin: auto;
+          
             width: 48%;
             font-family: Nunito;
             font-style: normal;
@@ -309,7 +309,7 @@ line-height: 3.4375rem;
         
         #hamburger-menu{
            grid-column: 1/-1;
-            height: 200vh;
+            height: 90vh;
             background: white;
             display: none;
             z-index: 999;
@@ -353,7 +353,7 @@ line-height: 3.4375rem;
          
             
             #logo{
-                height: 130%;    
+                height: 100%;    
             }
             
             #right{
@@ -396,9 +396,21 @@ line-height: 3.4375rem;
             #welcome-title{
                 font-size: 1.75rem;
             }
+            
+            #welcome-paragraph{
+                width: 100%;
+            }
+            
+            #what-we-do-paragraph{
+                width: 100%;
+            }
             .testimonial-container{
                 padding-top: 25px;
                 border-radius: 5px;
+                width: 90%;
+            }
+            #footer{
+                height: 7rem;
             }
         }
         
@@ -513,12 +525,17 @@ line-height: 3.4375rem;
         
 <!--        content container-->
         <div class="content-container">
-        <p id="welcome-title">
+        <div id="welcome-container" style="text-align: center">
+            <p id="welcome-title" style="display: inline-block">
             Welcome to Bloomsfield School and Kindergarten
             </p>
-            <p id= "welcome-paragraph">
+            </div>
+            <div id="welcome-paragraph-container" style="text-align: center">
+            <p id= "welcome-paragraph" style="display: inline-block">
             We are a Christian centered institution with a qualified team of staff at hand to provide an excellent range of learning experiences for all children.
             </p>
+            
+            </div>
             <div style="background-image: url('science2.jpg')" class="coming-soon">
                  <span style="margin: auto; font-family: Pangolin; font-size: 45px; color: green ;
           -webkit-animation-name: fade;
@@ -563,10 +580,14 @@ line-height: 3.4375rem;
         </div>
         
         <section class="what-we-do-container">
-        <p id="what-we-do">What we do</p>
-        <p id="what-we-do-paragraph">
+       <div id="what-we-do-container" style="text-align: center">
+            <p id="what-we-do" style="display: inline-block">What we do</p>
+            </div> 
+       <div id="what-we-do-paragraph-container" style="text-align: center">
+             <p id="what-we-do-paragraph" style="display: inline-block">
             Located in the Ruaka area, we place strong emphasis on the early years of child training and development. By combining modern teaching techniques and Christian principles, we raise young individuals into high principled, self-confident and hardworking future problem solvers.
-            </p>    
+            </p>  
+            </div>  
         </section>
         
         <a href="about-us.html"><div id="learn-more">Learn more</div></a>
@@ -576,7 +597,7 @@ line-height: 3.4375rem;
         <div>
             <img onclick="plusDivs(-1)" id="left" style="cursor: pointer" src="ico_left.png"/>
             <img onclick="plusDivs(1)" id="right" style="cursor: pointer" src="ico_right.png"/>
-            <div class="testimonial-container">
+            <div class="testimonial-container" style="overflow: scroll">
             Bringing my child to Bloomsfield has been the best decision. The time he has spent there has created the perfect foundation for his education. I love it.
                 <br />
                 <br />
