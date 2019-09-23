@@ -1192,7 +1192,7 @@ color: #1A1A1A;
         <input placeholder="Email address" id="email-address"/>
         <textarea placeholder="Write a short message" id="message"></textarea>
         <a id="send-btn" href="#">
-        <div >SEND</div>
+        <div id="send" >SEND</div>
         </a>
         
         
@@ -1297,5 +1297,49 @@ color: #1A1A1A;
                               
         
         </script>
+        <!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/6.6.2/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/3.1.0/firebase-database.js"></script>     
+<script src="https://code.jquery.com/jquery-1.11.0.min.js"></script>        
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+
+<script>
+  // Your web app's Firebase configuration
+  var firebaseConfig = {
+    apiKey: "AIzaSyCrX9wXYSKSuwrxqqGBIDY8xkxXYOxTtJA",
+    authDomain: "bloomsfield-d6f0b.firebaseapp.com",
+    databaseURL: "https://bloomsfield-d6f0b.firebaseio.com",
+    projectId: "bloomsfield-d6f0b",
+    storageBucket: "",
+    messagingSenderId: "600485709116",
+    appId: "1:600485709116:web:3b943f35fe11abc9464a39"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+    
+ var messagesRef = firebase.database().ref('enquiries');
+    
+ $(document).ready(function () {
+  //your code here
+        
+$('#send').click(function(e) {
+    e.preventDefault();
+ 
+    var newMessageRef = messagesRef.push();
+    newMessageRef.set({
+        name: $('#full-name-text').val(),
+        email: $('#email-address').val(),
+        message: $('#message').val()
+      
+    });
+ 
+    
+
+});
+});    
+    
+</script>
     </body>
 </html>
