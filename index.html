@@ -8,6 +8,18 @@
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Comfortaa|Gaegu|Gloria+Hallelujah|Handlee|Pangolin|Patrick+Hand|Poiret+One|Shadows+Into+Light+Two" rel="stylesheet" /><meta name="viewport" content="width=device-width" />
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js">
+    </script>
+    <!-- Font Awesome -->
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+<!-- Bootstrap core CSS -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+<!-- Material Design Bootstrap -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.8.10/css/mdb.min.css" rel="stylesheet">
+    <link href="hamburger.css" rel="stylesheet">
+
     </head>
     
 
@@ -34,6 +46,9 @@
         
 /*        styling for the top menu bar*/
         .top-bar{
+            position: fixed;
+            z-index: 1;
+            width: 100vw;
             display: grid;
             grid-column: 1/-1;
             height: 5rem;
@@ -110,7 +125,7 @@ text-align: center;
         .hero{
             width: 100%;
             height: 34.375rem;
-            background-image: url('stage.jpg');
+        
             background-repeat: no-repeat;
             background-size: cover;
             background-position: center;
@@ -194,8 +209,7 @@ line-height: 3.4375rem;
         width: 65%;    
         }
         
-        #learn-more{
-            
+        .learn-more{            
             margin: auto;
             width: 9.625rem;
             height: 3.125rem;
@@ -205,8 +219,7 @@ line-height: 3.4375rem;
             color: white;
             line-height: 3.125rem;
             border-radius: 1.56rem;
-            margin-top: 1.875rem;
-            
+            margin-top: 1.875rem;            
             font-family: Nunito;
             font-style: normal;
             font-weight: bold;
@@ -412,6 +425,10 @@ line-height: 3.4375rem;
             #footer{
                 height: 7rem;
             }
+            
+            #footer-text{
+                font-size: 15px;
+            }
         }
         
      
@@ -480,36 +497,112 @@ line-height: 3.4375rem;
         }
         
         
+        /* Icon 1 */
 
-   
-        
+.animated-icon1, .animated-icon2, .animated-icon3 {
+width: 30px;
+height: 20px;
+position: relative;
+margin: 0px;
+-webkit-transform: rotate(0deg);
+-moz-transform: rotate(0deg);
+-o-transform: rotate(0deg);
+transform: rotate(0deg);
+-webkit-transition: .5s ease-in-out;
+-moz-transition: .5s ease-in-out;
+-o-transition: .5s ease-in-out;
+transition: .5s ease-in-out;
+cursor: pointer;
+}
+
+.animated-icon1 span, .animated-icon2 span, .animated-icon3 span {
+display: block;
+position: absolute;
+height: 3px;
+width: 100%;
+border-radius: 9px;
+opacity: 1;
+left: 0;
+-webkit-transform: rotate(0deg);
+-moz-transform: rotate(0deg);
+-o-transform: rotate(0deg);
+transform: rotate(0deg);
+-webkit-transition: .25s ease-in-out;
+-moz-transition: .25s ease-in-out;
+-o-transition: .25s ease-in-out;
+transition: .25s ease-in-out;
+}
+
+.animated-icon1 span {
+background: #e65100;
+}
+
+.animated-icon2 span {
+background: #e3f2fd;
+}
+
+.animated-icon3 span {
+background: #f3e5f5;
+}
+
+.animated-icon1 span:nth-child(1) {
+top: 0px;
+}
+
+.animated-icon1 span:nth-child(2) {
+top: 10px;
+}
+
+.animated-icon1 span:nth-child(3) {
+top: 20px;
+}
+
+.animated-icon1.open span:nth-child(1) {
+top: 11px;
+-webkit-transform: rotate(135deg);
+-moz-transform: rotate(135deg);
+-o-transform: rotate(135deg);
+transform: rotate(135deg);
+}
+
+.animated-icon1.open span:nth-child(2) {
+opacity: 0;
+left: -60px;
+}
+
+.animated-icon1.open span:nth-child(3) {
+top: 11px;
+-webkit-transform: rotate(-135deg);
+-moz-transform: rotate(-135deg);
+-o-transform: rotate(-135deg);
+transform: rotate(-135deg);
+}
+
+
+      
     </style>
     <body>
     <div class="body-container">
         
-<!--        the top menu-->
-        <nav class="top-bar">
-        <img id="logo" src="logo.png"/>
-            
-            <span id="home">Home</span>
-            <span id="about-us">About us</span>
-            <span id="gallery">Gallery</span>
-            <span id="events">Events</span>
-            <span id="contacts">Contacts</span>
-            
-            <img id="hamburger" onclick="onHamburgerClick()" src="menu.png"/>
-            <img id="close" onclick="closeMenu()" src="close.png"/>
+<nav class=top-bar>
+        <img src="logo.png" style="height: 100%; z-index: 1;"/>
+        <img src="hamburger.jpg" class="hamburger" style="height: 80px; z-index: 1; position: absolute; right: 0;"/>
+        <img src="close.png" id="close" style="display: none; height: 45px; z-index: 1; position: absolute; right: 0; transform: rotate(90deg)"/>
+
+        <ul id="small-menu" style="position: absolute; top: 5rem; z-index: 1; background-color: white; width: 100vw; text-decoration: none; height: 90vh; display: none; text-align: center;">
+        <li style="text-decoration: none; list-style: none; margin-top: 70px; font-size: 35px; font-weight: bold; font-family: Nunito;">Home</li>
+        <li style="text-decoration: none; list-style: none;font-size: 35px; font-weight: bold; font-family: Nunito;">About Us</li>
+        <li style="text-decoration: none; list-style: none; font-size: 35px; font-weight: bold; font-family: Nunito;">Events</li>
+        <li style="text-decoration: none; list-style: none; font-size: 35px; font-weight: bold; font-family: Nunito;">Gallery</li>
+        <li style="text-decoration: none; list-style: none; font-size: 35px; font-weight: bold; font-family: Nunito;">Contact Us</li>
+        </ul>    
+    
         </nav>
-        <div id="hamburger-menu" >
-        <p class="hamburger-menu-item">Home</p>
-        <p class="hamburger-menu-item">About Us</p>
-        <p class="hamburger-menu-item">Gallery</p>
-        <p class="hamburger-menu-item">Events</p>
-        <p class="hamburger-menu-item">Contacts</p>
-        </div>
+
 <!--top menu ends here        -->
     
 <!--        hero image-->
+<!--
         <div class="hero ">
             <div id="text-container">
             <span id="nurture">Nurture .</span>
@@ -518,9 +611,43 @@ line-height: 3.4375rem;
             </div>
             
         </div>
-        
-        
+-->   
                 
+ <div id="myCarousel" class="carousel slide" data-ride="carousel">
+    <!-- Indicators -->
+    <ol class="carousel-indicators">
+      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+      <li data-target="#myCarousel" data-slide-to="1"></li>
+      <li data-target="#myCarousel" data-slide-to="2"></li>
+    </ol>
+
+    <!-- Wrapper for slides -->
+    <div class="carousel-inner">
+      <div class="item active">
+        <div style="display: display:flex; background-image: url('stage.jpg');" class="hero">
+          <div class="learn-more"></div>
+          </div>
+      </div>
+
+      <div class="item">
+        <div class="hero" style="background-image: url('IMG20191001090331.jpg');"></div>
+      </div>
+    
+      <div class="item">
+        <div class="hero" style="background-image: url('piano.jpg');"></div>
+      </div>
+    </div>
+
+    <!-- Left and right controls -->
+    <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+      <span class="glyphicon glyphicon-chevron-left"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="right carousel-control" href="#myCarousel" data-slide="next">
+      <span class="glyphicon glyphicon-chevron-right"></span>
+      <span class="sr-only">Next</span>
+    </a>
+  </div>
 
         
 <!--        content container-->
@@ -571,8 +698,7 @@ line-height: 3.4375rem;
           -webkit-animation-duration: 2.5s;
           animation-name: fade;
           animation-duration: 5s;
-        animation-iteration-count: 8s; 
-                                          font-size: 45px; color: white">for the next stage of their education </span>
+        animation-iteration-count: 8s;          font-size: 45px; color: white;">for the next stage of their education </span>
             </div>
             
            
@@ -590,30 +716,27 @@ line-height: 3.4375rem;
             </div>  
         </section>
         
-        <a href="about-us.html"><div id="learn-more">Learn more</div></a>
+        <a href="about-us.html"><div class="learn-more">Learn more</div></a>
         
         <section class="testimonials">
-        <p id="testimonial-title">Testimonials</p>
-        <div>
-            <img onclick="plusDivs(-1)" id="left" style="cursor: pointer" src="ico_left.png"/>
-            <img onclick="plusDivs(1)" id="right" style="cursor: pointer" src="ico_right.png"/>
-            <div class="testimonial-container" style="overflow: scroll">
-            Bringing my child to Bloomsfield has been the best decision. The time he has spent there has created the perfect foundation for his education. I love it.
-                <br />
-                <br />
-                <strong class="parent">Johns dad</strong>
-                
-            
-            </div>
-            <div class="testimonial-container">
-            Bringing my child to Bloomsfield has been the best decision. The time he has spent there has created the perfect foundation for his education. I love it.
-                <br />
-                <br />
-                <strong class="parent">Naliahs mom</strong>
-                
-            
-            </div>
-            </div>    
+         <p id="testimonial-title" >Get in touch</p>
+         <form style="height: 100%;
+            width: 100%;
+            display: grid;
+            grid-template-rows: repeat(1fr,1fr,2fr,1fr);          
+            font-family: Nunito;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 16px;
+            letter-spacing: 0.02em;
+            text-transform: uppercase;
+            padding: 5px;          
+                      ">
+          <input style="height: 80%;  padding: 5px;   border-radius: 10px;border: solid .5px black;" type="text" placeholder="e.g Patricia Juma" required/>  
+          <input style="height: 80%;  padding: 5px;   border-radius: 10px;border: solid .5px black;" type="text" placeholder="example@example.com" required/>  
+          <input style="height: 110%; padding: 5px;   border-radius: 10px; border: solid .5px black;" type="textbox" placeholder="Write your message here" required/>  
+          <input type="submit" class="learn-more" value="SEND"/>  
+          </form>    
         </section>
         <div style="text-align:center">
   <span class="dot"></span> 
@@ -649,25 +772,27 @@ line-height: 3.4375rem;
             
             
         //code for menu functionality
-        let hamburger = document.getElementById("hamburger")
-        let menu = document.getElementById("hamburger-menu")
+        let hamburger = document.getElementsByClassName("hamburger")[0]
+        let menu = document.getElementById("small-menu")
         let close = document.getElementById("close")
+        
 
         
-        const onHamburgerClick = () =>{
-            menu.style.display="grid"
+        hamburger.addEventListener('click', (e) =>{
+           console.log('working?')
             hamburger.style.display="none"
             close.style.display="block"
-            
-        }
+            menu.style.display="grid"
+        })
         
-        const closeMenu = () =>{
-            menu.style.display="none"
+        close.addEventListener('click', () =>{
             close.style.display="none"
             hamburger.style.display="block"
-        }
-        
+            menu.style.display="none"
+        })    
             
+        
+                  
 //        navigation code
         
         let bigMenuItems = document.getElementsByTagName('span')
@@ -716,26 +841,17 @@ line-height: 3.4375rem;
             
         
        
-            
-        var slideIndex = 1;
-        showDivs(slideIndex);
+  
 
-        function plusDivs(n) {
-          showDivs(slideIndex += n);
-        }
-
-        function showDivs(n) {
-          var i;
-          var x = document.getElementsByClassName("testimonial-container");
-          if (n > x.length) {slideIndex = 1}
-          if (n < 1) {slideIndex = x.length}
-          for (i = 0; i < x.length; i++) {
-            x[i].style.display = "none";  
-          }
-          x[slideIndex-1].style.display = "grid";  
-        }    
-            
         
         </script>
+        <!-- JQuery -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<!-- Bootstrap tooltips -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.4/umd/popper.min.js"></script>
+<!-- Bootstrap core JavaScript -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
+<!-- MDB core JavaScript -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.8.10/js/mdb.min.js"></script>
     </body>
 </html>
