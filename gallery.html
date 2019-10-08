@@ -187,7 +187,7 @@
         }
         
         #card1{
-            background-image: url("graduation.jpg");
+            background-image: url(IMG20191001121624.jpg);
             background-repeat: no-repeat;
             background-size: cover;
             background-position: center;
@@ -195,7 +195,7 @@
         
         
         #card2{
-            background-image: url("playtime.jpg");
+            background-image: url("field.jpg");
             background-repeat: no-repeat;
             background-size: cover;
             background-position: center;
@@ -203,7 +203,7 @@
         
         
         #card3{
-            background-image: url("trip1.jpg");
+            background-image: url("science.jpg");
             background-repeat: no-repeat;
             background-size: cover;
             background-position: center;
@@ -702,74 +702,83 @@
             }
         }
         
-        @media only screen and (max-height: 420px) and (orientation: landscape){
+                @media only screen and (min-width: 900px){
+            
+            .hamburger{
+                display: none;
+            }
             
         }
         
+          .top-bar{
+            position: fixed;
+            z-index: 1;
+            width: 100vw;
+            display: grid;
+            grid-column: 1/-1;
+            height: 5rem;
+            background-color: white;
+            grid-template-columns: repeat(12, 1fr);
+            grid-column-gap: .9rem;
+            
+              
+        
+        }
+        
+         @media only screen and (max-width: 992px){
+         
+            #big-menu{
+                display: none !important;
+            }
+        }
+        
+           .menu-links{
+
+            color: black; 
+            list-style: none;
+            padding: 15px;
+            font-size: 25px;
+            font-weight: bold;
+            font-family: Nunito;
+
+        }
     </style>
     <body>
         <!--        menu stsarts here-->
-    <div id="menu">
-        <img id="logo" src="logo.png"/>
-        <a href="#"><img onclick="onHamburgerClick()" id="hamburger" src="hamburger.jpg"/></a>    
-        </div>
-<!--        menu ends here-->
+       <!--        menu stsarts here-->
+        <nav class=top-bar>
+        <img src="logo.png" style="height: 100%; z-index: 1;"/>
+        <img src="hamburger.jpg" class="hamburger" style="height: 80px; z-index: 1; position: absolute; right: 30px; padding: 10px;"/>
+        <img src="close.png" id="close" style="display: none; height: 45px; z-index: 1; position: absolute; right: 30px; transform: rotate(90deg); padding: 5px;"/>
         
-        <!--        menu container-->
-        <div id="menu-container">
-        <img onclick="closeMenu()" id="close-black" src="close.png"/>
-       
-             <img id="menu-logo" src="logo.png"/>
-        
-         <a id="home" href="index.html">
-        <p>Home</p>
-        </a>
-         <a id="about" href="about-us.html">
-        <p>About Us</p>
-        </a>
-         <a id="gallery" href="gallery.html">
-        <p>Gallery</p>
-        </a>
-         <a id="events" href="events.html">
-        <p>Events</p>
-        </a>
-         <a id="contacts" href="contact-us.html">
-        <p>Contacts</p>
-        </a>
-        </div>
-<!--        menu container ends here-->
-      
-        
-        <!--        the top navigation bar-->
-    <div class="top-navigation-bar">
-        <img id="logo-web" src='logo.png'/>
-       <a id="home-web" href="index.html">
-        <p>Home</p>
-        </a>
-         <a id="about-web" href="about-us.html">
-        <p>About Us</p>
-        </a>
-         <a id="gallery-web" href="gallery.html">
-        <p>Gallery</p>
-        </a>
-         <a id="events-web" href="events.html">
-        <p>Events</p>
-        </a>
-         <a id="contacts-web" href="contact-us.html">
-        <p>Contacts</p>
-        </a>
-        </div>
+        <ul id="big-menu" style="display: flex; position: absolute; right: 30px;">
+            <a href="index.html" style="color: black;"><li class="menu-links">Home</li></a>
+            <a href="about-us.html"><li class="menu-links">About Us</li></a>
+            <a href="events.html"><li class="menu-links">Events</li></a>
+            <a href="gallery.html"><li class="menu-links">Gallery</li></a>
+            <a href="contact-us.html"><li class="menu-links">Contact Us</li></a>
+    </ul>
+        <ul id="small-menu" style="position: absolute; top: 5rem; z-index: 1; background-color: white; width: 100vw; text-decoration: none; height: 90vh; display: none; text-align: center;">
+        <a href="index.html"><li style="text-decoration: none; list-style: none; color: black; margin-top: 70px; font-size: 35px; font-weight: bold; font-family: Nunito;">Home</li></a>
+        <a href="about-us.html"><li style="text-decoration: none; list-style: none; color: black; font-size: 35px; font-weight: bold; font-family: Nunito;">About Us</li></a>
+        <a href="events.html"><li style="text-decoration: none; list-style: none; color: black; font-size: 35px; font-weight: bold; font-family: Nunito;">Events</li></a>
+        <a href="gallery.html"><li style="text-decoration: none; list-style: none; color: black; font-size: 35px; font-weight: bold; font-family: Nunito;">Gallery</li></a>
+        <a href="contact-us.html"><li style="text-decoration: none; list-style: none; color: black; font-size: 35px; font-weight: bold; font-family: Nunito;">Contact Us</li></a>
+        </ul>    
+    
+        </nav>
 <!--        ends here-->
-   
-        
         
 <!--        gallery title-->
         <p id="gallery-title">Gallery</p>
+        <div class="card-struct">
         <a onclick="imageSelectorCard1()" href="gallery-page.html">
         <div id="card1"></div>
-        <div id="card1-title">Learning at Bloomsfield</div>
+        <div id="card1-title">School Trips</div>
         
         </a>
+        
+        </div>
         
         <a href="gallery-page.html" onclick="imageSelectorCard2()">
         <div id="card2"></div>
@@ -779,7 +788,7 @@
         
         <a href="gallery-page.html" onclick="imageSelectorCard3()">
         <div id="card3"></div>
-        <div id="card3-title">School trips</div>
+        <div id="card3-title">Learning</div>
         
         </a>
         
@@ -790,23 +799,23 @@
         </div>
                 <script>
             
-//            code for menu functionality
-        let hamburger = document.getElementById("hamburger")
-        let menu = document.getElementById("menu-container")
-        let card1 = document.getElementById("card1")
+                      //code for menu functionality
+        let hamburger = document.getElementsByClassName("hamburger")[0]
+        let menu = document.getElementById("small-menu")
+        let close = document.getElementById("close")
         
+        hamburger.addEventListener('click', (e) =>{
+           console.log('working?')
+            hamburger.style.display="none"
+            close.style.display="block"
+            menu.style.display="grid"
+        })
         
-        
-        
-        const onHamburgerClick = () =>{
-            menu.style.display="block"
-            
-        }
-        
-        const closeMenu = () =>{
+        close.addEventListener('click', () =>{
+            close.style.display="none"
+            hamburger.style.display="block"
             menu.style.display="none"
-        }
-        
+        })    
         //ends here
         
 //        

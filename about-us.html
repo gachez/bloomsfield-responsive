@@ -6,6 +6,7 @@
     <meta content="width=device-width, initial-scale=1" name="viewport" />
         <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
         <link href="animate.css" rel="stylesheet">
+        <link href="about-us.css" rel="stylesheet">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
     <style>
@@ -560,7 +561,7 @@ color: #1A1A1A;
 /*        footer styling code */
         #footer{
             position: absolute;
-          top: 920px;   
+          top: 100% ;   
               width: 100vw;
         height: 75px;
         background-color: #22b14c;
@@ -632,160 +633,138 @@ color: #FFFFFF;
         }
         
         
-        
-/*        media queries down here*/
-        
+         .top-bar{
+            position: fixed;
+            z-index: 1;
+            width: 100vw;
+            display: grid;
+            grid-column: 1/-1;
+            height: 5rem;
+            background-color: white;
+            grid-template-columns: repeat(12, 1fr);
+            grid-column-gap: .9rem;
+            
+        }
         @media only screen and (max-width: 992px){
+         
+            #big-menu{
+                display: none !important;
+            }
+        }
+        
+          .menu-links{
+
+            color: black; 
+            list-style: none;
+            padding: 15px;
+            font-size: 25px;
+            font-weight: bold;
+            font-family: Nunito;
+
+        }
+        
+        .menu-links:hover{
+            color: darkgreen;
+        }
+        
+         
+        
+        #close{
+            
+            display:none;
+            grid-column: -1;
+        }
+        
+        #hamburger-menu{
+           grid-column: 1/-1;
+            height: 90vh;
+            background: white;
+            display: none;
+            z-index: 999;
+        }
+        
+        #hamburger-menu p{
+            margin: auto;
+            font-family: Nunito;
+            font-style: normal;
+            font-weight: bold;
+            line-height: 1.56rem;
+        }
+        
+        .hamburger-menu-item{
+            font-weight: 600; 
+            font-size: 1.875rem;
+        }
+        
+        @media only screen and (max-width: 900px){
             .body-container{
                 display: none;
             }
-            .small-body-container{
-                width: 100%;
-                height: 100%;
+            .small-body{
                 display: grid;
-                grid-template-rows: repeat(5,1fr);
-                grid-row-gap: 80px;
+            }
+            #footer{
+                top: 300% !important;
+            }
+            #facebook-logo{left: 90.3%;}
+            #footer-text{
+                left: 67px;
+                top: 40.3%;
+                font-size: 12px;
+            }
+            #copy-icon{
+                left: 28px;
+            }
+            #copyright-word{
+                display: none;
             }
             
-            .small-top-bar{
-                grid-row: 1;
-                width: 100%;
-                height: 90px;
-                background-color: white;
-                display: grid;
-                grid-template-columns: repeat(6,1fr);
-            }
-            
-            #small-logo{
-                grid-column: 1/4;
-            }
-            
-            #menu-bars{
-                grid-column:6;
-                margin-top: 25px;
-                cursor: pointer;
-            }
-            
-            #vision-mision-block{
-                width: 75%;
-                grid-row: 2;    
-                display: grid;
-                grid-template-rows: repeat(12,1fr)
-                margin-top: 100px;
-                margin: auto;
-            }
-            
-            #vision-mission-nav{
-                
-                grid-row: 1;
-                width: 100%;
-                background-color: #22B14C;;
-                display: grid;
-                grid-template-columns: repeat(6,1fr);
-            }
-            
-            #vision-mission-nav-text{
-                grid-column: 1/4;
-                
-                font-family: Nunito;
-                font-style: normal;
-                font-weight: bold;
-                font-size: 16px;
-                line-height: 22px;
-                color: #ffffff;
-                margin-top: 15px;
-                margin-left: 30px;
-                
-            }
-            
-            .up{
-                grid-column: -1;
-                margin-top: 20px;
-                margin-right: 30px;
-                   
-            }
-            
-            #vision-mission-hero{
-                width: 100%;
-                grid-row: 2/4;
-                height: 31.25rem;
-                object-fit: cover;
-            }
-            
-            #vision-mission-paragraph{
-                background: ;
-                width: 100%;
-                grid-row: 4/11;
-                background: #F3F3F3;
-            }
-            
-            #vision-mission-paragraph-text{
-
-            font-family: Nunito;
-            font-style: normal;
-            font-weight: normal;
-            font-size: 14px;
-            line-height: 21px;
-            margin-left: 20px;    
-            }
         }
-                
+        
+        @media only screen and (min-width: 900px){
+            .small-body{
+                display: none;
+            }
+            .hamburger{
+                display: none;
+            }
+            
+        }
+        
+
+        }
+        
     </style>
     </head>
     <body>
+        
+          <!--        menu stsarts here-->
+        <nav class=top-bar>
+        <img src="logo.png" style="height: 100%; z-index: 1;"/>
+        <img src="hamburger.jpg" class="hamburger" style="height: 80px; z-index: 1; position: absolute; right: 30px; padding: 10px;"/>
+        <img src="close.png" id="close" style="display: none; height: 45px; z-index: 1; position: absolute; right: 30px; transform: rotate(90deg); padding: 5px;"/>
+        
+        <ul id="big-menu" style="display: flex; position: absolute; right: 30px;">
+            <a href="index.html" style="color: black;"><li class="menu-links">Home</li></a>
+            <a href="about-us.html"><li class="menu-links">About Us</li></a>
+            <a href="events.html"><li class="menu-links">Events</li></a>
+            <a href="gallery.html"><li class="menu-links">Gallery</li></a>
+            <a href="contact-us.html"><li class="menu-links">Contact Us</li></a>
+    </ul>
+        <ul id="small-menu" style="position: absolute; top: 5rem; z-index: 1; background-color: white; width: 100vw; text-decoration: none; height: 90vh; display: none; text-align: center;">
+        <a href="index.html"><li style="text-decoration: none; list-style: none; color: black; margin-top: 70px; font-size: 35px; font-weight: bold; font-family: Nunito;">Home</li></a>
+        <a href="about-us.html"><li style="text-decoration: none; list-style: none; color: black; font-size: 35px; font-weight: bold; font-family: Nunito;">About Us</li></a>
+        <a href="events.html"><li style="text-decoration: none; list-style: none; color: black; font-size: 35px; font-weight: bold; font-family: Nunito;">Events</li></a>
+        <a href="gallery.html"><li style="text-decoration: none; list-style: none; color: black; font-size: 35px; font-weight: bold; font-family: Nunito;">Gallery</li></a>
+        <a href="contact-us.html"><li style="text-decoration: none; list-style: none; color: black; font-size: 35px; font-weight: bold; font-family: Nunito;">Contact Us</li></a>
+        </ul>    
+    
+        </nav>
+<!--        ends here-->
+        
        <div class="body-container">  
 <!--this is the menu for tablet and smaller screens-->
-        <!--        menu stsarts here-->
-    <div id="menu">
-        <img id="logo" src="logo.png"/>
-        <a href="#">
-        <img onclick="onHamburgerClick()" id="hamburger" src="menu.png"/>    
-        </a>
-        </div>
-<!--        menu ends here-->
-        
-<!--        menu container-->
-        <div id="menu-container">
-        <img onclick="closeMenu()" id="close-black" src="close.png"/>
-        <img id="menu-logo" src="logo.png"/>
-         <a id="home" href="index.html">
-        <p class="menu-items">Home</p>
-        </a>
-         <a id="about" href="about-us.html">
-        <p class="menu-items">About Us</p>
-        </a>
-         <a id="gallery" href="gallery.html">
-        <p class="menu-items">Gallery</p>
-        </a>
-         <a id="events" href="events.html">
-        <p class="menu-items">Events</p>
-        </a>
-         <a id="contacts" href="contact-us.html">
-        <p class="menu-items">Contacts</p>
-        </a>
-        </div>
-<!--        menu container for tablet and mobile ends here-->
-
-<!--        the top navigation bar-->
-    <div class="top-navigation-bar">
-        <a href="index.html"><img id="logo-web" src='logo.png'/></a>
-       <a id="home-web" href="index.html">
-        <p>Home</p>
-        </a>
-         <a id="about-web" href="about-us.html">
-        <p>About Us</p>
-        </a>
-         <a id="gallery-web" href="gallery.html">
-        <p>Gallery</p>
-        </a>
-         <a id="events-web" href="events.html">
-        <p>Events</p>
-        </a>
-         <a id="contacts-web" href="contact-us.html">
-        <p>Contacts</p>
-        </a>
-        </div>
-<!--        ends here-->
+      
         
         
 
@@ -854,7 +833,7 @@ We also pay close attention to the children entrusted in our care. We have ensur
         <div class="box" id="grade2">Grade 2</div>
 -->
 <!--        ends-->
-       
+        </div>
             
         <!--        footer-->
         <footer id="footer">
@@ -863,67 +842,98 @@ We also pay close attention to the children entrusted in our care. We have ensur
             <p id="footer-text">2019. Bloomsfield School. All rights reserved. </p>
             <img id="facebook-logo" src="ico_facebook.png" />
         </footer>
-         </div> 
+         
       
 <!--        for mobiles and small devices-->
-        <div class="small-body-container">
+        <div class="small-body">
+<!--        first block-->
+            <div class="about-block" id="block1">
+<!--                title block-->
+                <div class="title-block">
+                <p class="title-text">Vision and Mission</p>
+                <img src="icon-up.jpg" class="icon"/>
+                </div>
+<!--                hero image-->
+                <div class="block-hero" style="background-image: url(career.jpg)"></div>
+<!--                block-description-->
+                <div class="block-text">
+                <p class="block-text-paragraph">
+                   <strong>Vision</strong><br /><br />
+                     To be the school of choice and the leading performer in providing quality education founded on Christian principles
+                    <br />
+                    <br />
+                    <strong>Mission</strong>
+                    <br />
+                    <br />
+                    To provide holistic education in a conducive environment that develops the children’s physical, mental, social and spiritual faculties.
+                    </p>
+                </div>
+                 </div>
             
-<!--            top bar container-->
+<!--            second-block-->
             
-            <div class="small-top-bar">
-            <img id="small-logo" src="logo.png"/>
-            <img id="menu-bars" src="menu.png"/>    
+             <div class="about-block" id="block2">
+<!--                title block-->
+                <div class="title-block">
+                <p class="title-text">Why choose us</p>
+                <img src="icon-up.jpg" class="icon"/>
+                </div>
+<!--                hero image-->
+                <div class="block-hero" style="background-image: url(science3.jpg)"></div>
+<!--                block-description-->
+                <div class="block-text">
+                <p class="block-text-paragraph">
+                    Pillared on Christian principles, our programs and learning experiences are directed towards developing young children into self-disciplined individuals with high moral values and self-esteem, hardworking future problem solvers. We also pay close attention to the children entrusted in our care. We have ensured that our compound is as secure as possible. A 24 hr security guard is present at the gate. We also have a designated staff member to ensure that pick-ups and drops are supervised.
+                    </p>
+                </div>
+                
+                
             </div>
-<!--            top bar ends here-->
             
-<!--        vision and mission block-->
-            <section id="vision-mision-block">
-            <div id="vision-mission-nav">
-            <p id="vision-mission-nav-text">Vision & mission</p>
-            <img class="up" src="ico-up.svg"/>    
-            </div>
-            <img id="vision-mission-hero" class="animated forwards expand-hero fadeIn delay-0.5s" src="science3.jpg"/>
-            <div id="vision-mission-paragraph">
-            <p id="vision-mission-paragraph-text">
-                <strong>Vision</strong><br /><br />
-                To be the school of choice and the leading performer in providing quality education founded on Christian principles.
-                <br /><br />
-                <strong>Mission</strong><br /><br />
-                To provide holistic education in a conducive environment that develops the children’s physical, mental, social and spiritual faculties.
-                </p>
-            </div>
-            </section>
+            <!--            third-block -->
             
-<!--            why choose us block-->
-            <section id="why-choose-block">
-            <div id="why-choose-nav">
-            <p id="why-choose-nav-text">Why choose us</p>
-            <img src="ico-up.svg"/>    
+             <div class="about-block" id="block3">
+<!--                title block-->
+                <div class="title-block">
+                <p class="title-text">Learning</p>
+                <img src="icon-up.jpg" class="icon"/>
+                </div>
+<!--                hero image-->
+                <div class="block-hero" style="background-image: url(music.jpg)"></div>
+<!--                block-description-->
+                <div class="block-text">
+                <p class="block-text-paragraph">
+                   <strong>Curriculum</strong><br /><br />
+                     At Bloomsfield, we offer the new Kenya National Curriculum, 2:6:6:3, as well as prepare children for International systems of education. Our classes are as follows:
+                    <br /><br />
+                    Playgroup 1<br /> Playgroup 2 <br />Beginner<br /> PP1<br /> PP2
+                    <br />Grade 1 
+                    
+                    </p>
+                </div>
+                
+                
             </div>
-            <img src="play4.jpg" class="animated forwards expand-hero fadeIn delay-0.5s"/>
-            <div id="why-choose-paragraph">
-            <p id="why-choose-paragraph-text">
-                Pillared on Christian principles, our programs and learning experiences are directed towards developing young children into self-disciplined individuals with high moral values and self-esteem, hardworking future problem solvers. We also pay close attention to the children entrusted in our care. We have ensured that our compound is as secure as possible. A 24 hr security guard is present at the gate. We also have a designated staff member to ensure that pick-ups and drops are supervised.
-                </p>
-            </div>
-            </section>
             
-<!--            learning block-->
-            <section id="learning-block">
-            <div id="learning-nav">
-            <p id="learning-nav-text">Learning</p>
-            <img src="ico-up.svg"/>    
-            </div>
-            <img src="computer.jpg" class="animated expand-hero forwards fadeIn delay-0.5s"/>
-            <div id="learning-paragraph">
-            <p id="learning-paragraph-text">
-             At Bloomsfield, we offer the new Kenya National Curriculum, 2:6:6:3, as well as prepare children for International systems of education. Our classes are as follows: Playgroup 1 Playgroup 2 Beginner PP1 PP2 Grade 1
-                </p>
-            </div>
-            </section>
         </div>
         <script>
-         
+                      //code for menu functionality
+        let hamburger = document.getElementsByClassName("hamburger")[0]
+        let menu = document.getElementById("small-menu")
+        let close = document.getElementById("close")
+        
+        hamburger.addEventListener('click', (e) =>{
+           console.log('working?')
+            hamburger.style.display="none"
+            close.style.display="block"
+            menu.style.display="grid"
+        })
+        
+        close.addEventListener('click', () =>{
+            close.style.display="none"
+            hamburger.style.display="block"
+            menu.style.display="none"
+        })    
 //            variables for the mission and vision elements
             let visionTitle = document.getElementById("vision-tilte")
             let visionText = document.getElementById("vision-text")
@@ -1054,23 +1064,6 @@ We also pay close attention to the children entrusted in our care. We have ensur
             
             
             
-//            code for the hamburger menu
-            
-            //            code for menu functionality
-        let hamburger = document.getElementById("hamburger")
-        let menu = document.getElementById("menu-container")
-
-        
-        const onHamburgerClick = () =>{
-            menu.style.display="block"
-            
-        }
-        
-        const closeMenu = () =>{
-            menu.style.display="none"
-        }
-        
-        //ends here
         
 //        functions for cleaning up th larger screens 
         function cleanBigScreen(){
@@ -1346,6 +1339,8 @@ We also pay close attention to the children entrusted in our care. We have ensur
         
         
         window.onload= hideImage
+            
+            
         
         
         </script>
