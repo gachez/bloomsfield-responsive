@@ -1,17 +1,31 @@
 <html>
-<head>
+<head><meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    
+
     <title>
     Bloomsfield School and Kindergarten - Home
     </title>
+    
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
 
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Comfortaa|Gaegu|Gloria+Hallelujah|Handlee|Pangolin|Patrick+Hand|Poiret+One|Shadows+Into+Light+Two" rel="stylesheet" /><meta name="viewport" content="width=device-width" />
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  
+            <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-124301239-1"></script>
+        <script>
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+        
+          gtag('config', 'UA-124301239-1');
+        </script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js">
     </script>
+    
     <!-- Font Awesome -->
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
 <!-- Bootstrap core CSS -->
@@ -238,7 +252,7 @@ line-height: 3.4375rem;
         }
         
         #testimonial-title{
-            
+            cursor: pointer;
             font-family: Nunito;
             font-style: normal;
             font-weight: bold;
@@ -655,31 +669,43 @@ line-height: 3.4375rem;
 
                 </div>
         -->   
-        <div class="slideshow-container" >
+        <div class="slideshow-container">
 
 <div class="mySlides ">
-  <img src="topfield.jpg" style="width:100% !important; height: 80vh !important; margin-top: 29%;">
+  <img src="zoom-classes.jpg" style="width:100% !important; height: 80vh !important;">
  
 </div>
 
 <div class="mySlides ">
  
-  <img src="jumbo.jpg" style="width:100% !important; height: 80vh !important; margin-top: 29%;">
+  <img src="virtual1.jpg" loading="lazy" alt=".." style="width:100% !important; height: 80vh !important;">
   
 </div>
 
 <div class="mySlides ">
   
-  <img src="science.jpg" style="width:100% !important; height: 80vh !important; margin-top: 29%;">
+  <img src="learn-play.jpg" loading="lazy" alt=".." style="width:100% !important; height: 80vh !important;">
   
 </div>
             
 
 <div class="mySlides ">
   
-  <img src="IMG20191001121624.jpg" style="width:100% !important; height: 80vh !important; margin-top: 29%;">
+  <img src="IMG20191001121624.jpg" loading="lazy" alt=".."  style="width:100% !important; height: 80vh !important;">
   
-</div>            
+</div> 
+
+<div class="mySlides ">
+  
+  <img src="science.jpg" loading="lazy" alt=".."  style="width:100% !important; height: 80vh !important;">
+  
+</div> 
+
+<div class="mySlides ">
+  
+  <img src="virtual-learning-kenya.jpg" loading="lazy" alt=".."  style="width:100% !important; height: 80vh !important;">
+  
+</div> 
 
 <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
 <a class="next" onclick="plusSlides(1)">&#10095;</a>
@@ -692,6 +718,7 @@ line-height: 3.4375rem;
   <span class="dot" onclick="currentSlide(2)"></span> 
   <span class="dot" onclick="currentSlide(3)"></span> 
   <span class="dot" onclick="currentSlide(4)"></span> 
+  <span class="dot" onclick="currentSlide(5)"></span> 
 </div>
 
 
@@ -765,25 +792,9 @@ line-height: 3.4375rem;
         <a href="about-us.html"><div class="learn-more">Learn more</div></a>
         
         <section class="testimonials">
-         <p id="testimonial-title" >Get in touch</p>
-         <form style="height: 100%;
-            width: 100%;
-            display: grid;
-            grid-template-rows: repeat(1fr,1fr,2fr,1fr);          
-            font-family: Nunito;
-            font-style: normal;
-            font-weight: normal;
-            font-size: 16px;
-            letter-spacing: 0.02em;
-            text-transform: uppercase;
-            padding: 5px;          
-                      ">
-          <input id="full-name-text" style="height: 80%;  padding: 5px;   border-radius: 10px;border: solid .5px black;" type="text" placeholder="e.g Patricia Juma" required/>  
-          <input id="email-address" style="height: 80%;  padding: 5px;   border-radius: 10px;border: solid .5px black;" type="text" placeholder="example@example.com" required/>  
-          <input id="message" style="height: 110%; padding: 5px;   border-radius: 10px; border: solid .5px black;" type="textbox" placeholder="Write your message here" required/>  
-          <input type="submit" id="send" class="learn-more" value="SEND"/>  
-          </form>    
-        </section>
+        <p id="testimonial-title" onclick="() => { window.location.href = 'contact-us.html' }" >Get in touch</p>
+              </section>
+
         <footer id="footer">
         <p id="footer-text">
             Copyright &copy; 2019. Bloomsfield School. All rights reserved
@@ -793,6 +804,7 @@ line-height: 3.4375rem;
         
         </div>
         <script>
+            
             
         //code for a slideshow    
             
@@ -810,6 +822,25 @@ line-height: 3.4375rem;
                   x[myIndex-1].style.display = "grid";  
                   setTimeout(carousel, 9000); // Change image every 2 seconds
         }   
+        
+        
+        
+        //lazy loading        
+        // (async () => {
+        //     if ('loading' in HTMLImageElement.prototype) {
+        //         const images = document.querySelectorAll("img.lazyload");
+        //         images.forEach(img => {
+        //             img.src = img.dataset.src;
+        //         });
+        //     } else {
+        //         // Dynamically import the LazySizes library
+        //         const lazySizesLib = await import('/lazysizes.min.js');
+        //         // Initiate LazySizes (reads data-src & class=lazyload)
+        //         lazySizes.init(); // lazySizes works off a global.
+        //     }
+        // })();
+
+        //end
             
             
         //code for menu functionality
@@ -830,93 +861,7 @@ line-height: 3.4375rem;
             close.style.display="none"
             hamburger.style.display="block"
             menu.style.display="none"
-        })    
-            
-        
-                  
-//        navigation code
-        
-        let bigMenuItems = document.getElementsByTagName('span')
-        
-        bigMenuItems[0].addEventListener('click', () =>{
-            window.location.href="index.html"
-        })
-            
-           bigMenuItems[1].addEventListener('click', () =>{
-            window.location.href="about-us.html"
-        })
-            
-           bigMenuItems[2].addEventListener('click', () =>{
-            window.location.href="gallery.html"
-        })
-            
-           bigMenuItems[3].addEventListener('click', () =>{
-            window.location.href="events.html"
-        })    
-            
-           bigMenuItems[4].addEventListener('click', () =>{
-            window.location.href="contact-us.html"
-        })    
-            
-            
-        let smallMenuItems = document.getElementsByClassName('hamburger-menu-item')
-           smallMenuItems[0].addEventListener('click', () =>{
-            window.location.href="index.html"
-        })
-            
-           smallMenuItems[1].addEventListener('click', () =>{
-            window.location.href="about-us.html"
-        })
-            
-           smallMenuItems[2].addEventListener('click', () =>{
-            window.location.href="gallery.html"
-        })
-            
-           smallMenuItems[3].addEventListener('click', () =>{
-            window.location.href="events.html"
-        })    
-            
-           smallMenuItems[4].addEventListener('click', () =>{
-            window.location.href="contact-us.html"
-        })    
-            
-        
-       
-  
- // Your web app's Firebase configuration
-  var firebaseConfig = {
-    apiKey: "AIzaSyCrX9wXYSKSuwrxqqGBIDY8xkxXYOxTtJA",
-    authDomain: "bloomsfield-d6f0b.firebaseapp.com",
-    databaseURL: "https://bloomsfield-d6f0b.firebaseio.com",
-    projectId: "bloomsfield-d6f0b",
-    storageBucket: "",
-    messagingSenderId: "600485709116",
-    appId: "1:600485709116:web:3b943f35fe11abc9464a39"
-  };
-  // Initialize Firebase
-  firebase.initializeApp(firebaseConfig);
-    
- var messagesRef = firebase.database().ref('enquiries');
-    
- $(document).ready(function () {
-  //your code here
-        
-$('#send').click(function(e) {
-    e.preventDefault();
- 
-    var newMessageRef = messagesRef.push();
-    newMessageRef.set({
-        name: $('#full-name-text').val(),
-        email: $('#email-address').val(),
-        message: $('#message').val()
-      
-    });
- 
-    
-
-});
-});
-        
+        })        
         </script>
         <script type="text/javascript" src="slide.js"></script>
         <!-- JQuery -->

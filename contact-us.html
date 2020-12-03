@@ -1210,7 +1210,7 @@ color: #1A1A1A;
         <input placeholder="Email address" id="email-address"/>
         <textarea placeholder="Write a short message" id="message"></textarea>
         <a id="send-btn" href="#">
-        <div id="send" >SEND</div>
+        <div id="send" aria-valuetext="SEND" >SEND</div>
         </a>
         
         
@@ -1288,34 +1288,16 @@ color: #1A1A1A;
             }
 //            function to close the thank you block
                         const slideOut = () =>{
-                closeIcon.style.display="none"
-                closeBlock.style.display="none"
-                darkScreen.style.display="none"
-                
-                fullName.style.opacity=1
-                email.style.opacity=1
-                emailBody.style.opacity=1
-                sendBtn.style.opacity=1
-                            topMenu.style.opacity=1
+                window.location.reload();           
             }
             
             let sendBtn = document.getElementById("send-btn");
             
-            sendBtn.addEventListener('click', ()=>{
-                if (screen.width > 1024){
-                    slideIn()
-                }
-                else{
-                    console.log("usipaniiiiick")
-                    email.value=""
-                fullName.value=""
-                emailBody.value=""
-           
-                }
-            })
-            
             closeIcon.addEventListener('click', slideOut)
             
+            sendBtn.addEventListener('click', () => {
+                thankYouB();
+            })
                               
         
         </script>
@@ -1330,38 +1312,53 @@ color: #1A1A1A;
 <script>
    
     
-  // Your web app's Firebase configuration
-  var firebaseConfig = {
-    apiKey: "AIzaSyCrX9wXYSKSuwrxqqGBIDY8xkxXYOxTtJA",
-    authDomain: "bloomsfield-d6f0b.firebaseapp.com",
-    databaseURL: "https://bloomsfield-d6f0b.firebaseio.com",
-    projectId: "bloomsfield-d6f0b",
-    storageBucket: "",
-    messagingSenderId: "600485709116",
-    appId: "1:600485709116:web:3b943f35fe11abc9464a39"
-  };
-  // Initialize Firebase
-  firebase.initializeApp(firebaseConfig);
-    
- var messagesRef = firebase.database().ref('enquiries');
-    
+ const thankYouB = () => {
+        if (screen.width > 1024){
+            slideIn()
+                }
+        else{
+            console.log("usipaniiiiick")
+            email.value=""
+        fullName.value=""
+        emailBody.value=""
+           
+        }
+}
+
  $(document).ready(function () {
   //your code here
+  const sendEmail = async () => {
+  console.log("function running....")   
+  await fetch('https://us-central1-gachez-cloud-functions.cloudfunctions.net/emailSenderBlooms ', {
+    method: 'POST',
+    headers: {
+      'Accept': 'application/json',
+      'Content-Type': 'application/json'
+    },
+    body: JSON.stringify({
+                            message: $('#message').val(),
+                            host: 'mail.bloomsfieldschool.co.ke',
+                            user: 'info@bloomsfieldschool.co.ke',
+                            pass: 'b70oM5FIELD',
+                            to: 'briangach98@gmail.com, info@bloomsfieldschool.co.ke',
+                            from: $('#email-address').val(),
+                            name: $('#full-name-text').val()
+                         })
+  }).then(res => {
+      console.log("message sent!");
+      alert("message sent!");
+      window.location.reload();
+  }).catch(err => console.log(err))
+  
+} 
         
 $('#send').click(function(e) {
+    console.log('works?')
     e.preventDefault();
- 
-    var newMessageRef = messagesRef.push();
-    newMessageRef.set({
-        name: $('#full-name-text').val(),
-        email: $('#email-address').val(),
-        message: $('#message').val()
-      
-    });
- 
-    
-
+    sendEmail();
 });
+
+
 });    
     
 </script>
