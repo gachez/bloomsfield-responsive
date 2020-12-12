@@ -244,65 +244,58 @@
                     <h1>Kindly fill and submit this form</h1>
                     <div class="form-group">
                         <label for="fullName">Student Full Name</label>
-                        <input type="text" class="form-control" id="inputFullName" aria-describedby="fullNameHelp">
+                        <input type="text" class="form-control" id="inputFullName" aria-describedby="fullNameHelp" required>
                     </div>
 
                     <div class="btn-group" style="display: flex; flex-direction: column;">
-                        <label for="classLevel">Class Level</label>
-                        <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" data-display="static" aria-haspopup="true" aria-expanded="false">
-                          Beginner
-                        </button>
-                        <div class="dropdown-menu dropdown-menu-right dropdown-menu-lg-left" style="width: 100%;">
-                          <button class="dropdown-item" type="button">Beginner</button>
-                          <button class="dropdown-item" type="button">Playgroup</button>
-                          <button class="dropdown-item" type="button">PP1</button>
-                          <button class="dropdown-item" type="button">PP2</button>
-                          <button class="dropdown-item" type="button">Grade 1</button>
-                          <button class="dropdown-item" type="button">Grade 2</button>
-                          <button class="dropdown-item" type="button">Grade 3</button>
-                        </div>
+                        <label for="sel1">Class Level</label>
+                        <select class="form-control" id="classLevel">
+                          <option>Playgroup</option>
+                          <option>Beginner</option>
+                          <option>PP1</option>
+                          <option>PP2</option>
+                          <option>Grade 1</option>
+                          <option>Grade 2</option>
+                          <option>Grade 3</option>
+                        </select>
                       </div>
 
                     <div class="form-group">
                         <label for="studentGender">Student Gender</label>
-                        <div class="custom-control custom-radio custom-control-inline">
-                            <input type="radio" id="male" name="male" class="custom-control-input">
-                            <label class="custom-control-label" for="male">Male</label>
-                          </div>
-                          <div class="custom-control custom-radio custom-control-inline">
-                            <input type="radio" id="female" name="female" class="custom-control-input">
-                            <label class="custom-control-label" for="female">Female</label>
-                          </div>
+                        <select class="form-control" id="gender">
+                            <option>Male</option>
+                            <option>Female</option>
+                            </select>
                     </div>
 
                     <div class="form-group">
                         <label for="dateOfBirth">Date of Birth</label>
-                        <input type="date" class="form-control" id="DOB" >
+                        <input type="date" class="form-control" id="DOB" required>
                     </div>  
 
                     <div class="form-group">
                         <label for="fullNameParent">Parent Full Name</label>
-                        <input type="text" class="form-control" id="inputFullNameParent" >
+                        <input type="text" class="form-control" id="inputFullNameParent" required>
                     </div>    
 
                     <div class="form-group">
                         <label for="parentContact">Parent Phone Number</label>
-                        <input type="text" class="form-control" id="parentContact" placeholder="0712345678" >
+                        <input type="text" class="form-control" id="parentContact" placeholder="0712345678" required>
                     </div>                            
 
                     <div class="form-group">
                         <label for="parentEmail">Parent Email</label>
-                        <input type="email" class="form-control" id="parentEmail" placeholder="example@example.com" >
+                        <input type="email" class="form-control" id="parentEmail" placeholder="example@example.com" required>
                     </div>                 
                     
                     <div class="form-group">
                         <label for="residentialAddress">Where do you live?</label>
-                        <input type="text" class="form-control" id="residentialAddress" placeholder="e.g Joyland, Ruaka" >
+                        <input type="text" class="form-control" id="residentialAddress" placeholder="e.g Joyland, Ruaka" required>
                     </div>                
 
                     <div class="form-group">
                         <div class="col-sm-10">
-                          <button type="submit" class="btn btn-success">Submit</button>
+                          <button type="submit" class="btn btn-success" id="submit-btn">Submit</button>
                         </div>
                       </div>
 
@@ -312,8 +305,42 @@
         <div id="footer">
             <p id="copyright">Copyright &copy; 2019. Bloomsfield School. All rights reserved.</p>
                <a href="https://web.facebook.com/BloomsfieldSchoolandKindergarten/?_rdc=1&_rdr">
-                        <img id="fb-icon" src="ico_facebook.png"/>   </a> 
+                        <img id="fb-icon" alt="facebook bloomsfield school" src="ico_facebook.png"/>   </a> 
              
             </div>
+
+<script>
+    
+    const sendApplication = async () => {
+      await fetch('https://us-central1-gachez-cloud-functions.cloudfunctions.net/sendApplication', {
+        method: 'POST',
+        headers: {
+          'Accept': 'application/json',
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({
+                        fullName: document.getElementById('inputFullName').value,
+                        classLevel: document.getElementById('classLevel').value,
+                        gender: document.getElementById('gender').value,
+                        dateOfBirth: document.getElementById('DOB').value,
+                        parentName: document.getElementById('inputFullNameParent').value,
+                        parentPhone: document.getElementById('parentContact').value,
+                        parentEmail: document.getElementById('parentEmail').value,
+                        residentialAddress: document.getElementById('residentialAddress').value
+                            })
+      }).then(res => {
+          console.log("application sent!");
+          alert("application sent!");
+          window.location.reload();
+      }).catch(err => console.log(err))
+
+      document.getElementById('submit-btn').addEventListener('click', () => {
+       
+       alert("sending application...");  
+        sendApplication();
+      })
+      
+    }
+</script>            
 </body>    
 </html>
